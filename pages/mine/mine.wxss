@@ -1,0 +1,31 @@
+/* pages/mine/mine.wxss */
+
+page{
+  background: black;
+}
+/*显示用户图像，昵称，背景图片*/
+.userinfo {
+  display: flex;flex-direction: column;height: 100%;
+   background: url(https://www.yunteng0923.cn/MakeYouListen/voices/bj1.jpg) no-repeat; 
+  background-size: 100% 100%;
+}
+.userinfo button{
+  margin: auto;
+}
+.userinfo-avatar {
+  width: 80px;height: 80px; border-radius: 50%;margin: 2rem auto 0.8rem auto;
+}
+.userinfo-nickname {
+  color:#fff;margin: 0 auto;
+}
+
+.item{
+ 
+  width: 95%;height: 50px;line-height: 50px;
+  background: #FFA500;color: #fff; 
+  margin-top:0.3rem;padding-left:1rem;
+  position: relative;
+}
+.right{
+  position: absolute; top:1rem; left:85%;
+}

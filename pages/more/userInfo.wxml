@@ -1,0 +1,33 @@
+<!--pages/userInfo/userInfo.wxml-->
+
+<view>
+<form bindsubmit="userInfoSubmit"  bindreset="formReset" class="update">
+    <!--用户名-->
+    <input placeholder="请输入新用户名" name="username" type='text'></input>
+     <!--性别-->
+    <picker bindchange="bindPickerChange3" value="{{sex_index}}" range="{{sex}}" name="sex">
+      <view class="picker">
+        性别：{{sex[sex_index]}}
+      </view>
+     </picker>
+     <!--年龄-->
+    <picker bindchange="bindPickerChange1" value="{{age_index}}" range="{{age}}" name="age">
+      <view class="picker">
+        年龄：{{age[age_index]}}
+      </view>
+    </picker>
+    <!--校区-->
+    <picker bindchange="bindPickerChange" value="{{school_index}}" range="{{array}}" name='school'>
+      <view class="picker">
+        所在校区：{{array[school_index]}}
+      </view>
+    </picker>
+    <!--学院-->
+    <picker bindchange="bindPickerChange4" value="{{ac_index}}" range="{{academy}}" name='academy'>
+      <view class="picker">
+        所在院系：{{academy[ac_index]}}
+      </view>
+    </picker>
+    <button plain form-type="submit" type='primary'> 提交 </button>
+  </form>
+</view>

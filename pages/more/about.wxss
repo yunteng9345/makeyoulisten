@@ -1,0 +1,17 @@
+.up{
+  background: url(https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=a8ce266cb151f819e5280b18bbdd2188/0bd162d9f2d3572c80033c9b8b13632763d0c390.jpg) no-repeat;
+  background-size: 100% 100%;
+  height: 250px;
+}
+.up image{
+  display:block;
+  width: 200px;height: 200px;border-radius: 50%;margin: 0 auto;
+  opacity: 0.5;
+}
+.up text{
+   display:block;margin:0.5rem;text-align: center;padding: 0.5rem;
+}
+.down text{
+  display: block;
+  margin:0.5rem;margin-top:1rem;
+}

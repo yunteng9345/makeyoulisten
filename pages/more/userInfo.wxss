@@ -1,0 +1,8 @@
+/* pages/userInfo/userInfo.wxss */
+.update{
+  display: block;
+  margin: 1rem;
+}
+picker,input{
+  margin-bottom: 1rem;
+}

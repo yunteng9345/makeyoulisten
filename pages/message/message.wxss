@@ -1,0 +1,51 @@
+/* 一条消息的样式
+.li{
+  margin: 1rem;clear: both;border-bottom: 1px solid royalblue;
+}
+消息左边的头像部分
+.left{
+  width: 25%;float: left;
+}
+.left image{
+  width: 50px;height: 50px;border-radius: 50%;margin: 0.5rem;
+}
+消息右边的昵称，类型，内容，时间
+.right{
+  width: 70%;float: left; margin: 0.5rem 0;
+}
+.right text{
+  display: block;padding: 0.2rem 0;overflow: hidden;
+}
+.right .content{
+  font-size: 12px;
+}
+.right .time{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 10px;
+  color: #333;
+} */
+page{
+  background-color: black;
+}
+
+
+.li{ 
+  background-image: url(https://www.yunteng0923.cn/MakeYouListen/voices/bj1.jpg);
+  background-size: 100% 100%;
+  margin:1rem 0.5rem;border-radius: 5px;border: 1px solid salmon;
+}
+.li text{
+  display: block;margin-top: 0.5rem;
+  color:white;
+}
+.li .title{
+  height: 20px;line-height: 20px;text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.li .content{
+  height: 50px;line-height:25px;overflow: hidden;
+}
+.li .time{
+  font-size: 15px;margin-bottom: 0.5rem;
+}
+.li .fa{
+  padding:0 0.5rem ;
+}

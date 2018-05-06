@@ -1,0 +1,9 @@
+<view>
+  <block wx:for="{{notice}}" wx:key>
+    <view class='li'>
+      <text class='title'>{{item.title}}</text>
+      <text class='content'>{{item.content}}</text>
+      <text class='time fa fa-calendar' decode>&ensp;{{item.time}}</text>
+    </view>
+  </block>
+</view>

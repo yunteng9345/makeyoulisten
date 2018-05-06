@@ -1,0 +1,16 @@
+<view>
+  <view class='up'>
+    <!-- <image src="{{about.schoolPic}}"></image> -->
+    
+  </view>
+  <view class='down'>
+      <text>版本:{{about.version}}</text>
+      <text>开发人员:{{about.developer}}</text>
+      <text>简介:{{about.summary}}</text>
+      <text>{{about.school}}</text>
+      <button  open-type="contact" type='primary' >联系客服</button>
+  </view>
+
+  
+
+</view>      

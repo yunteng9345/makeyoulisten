@@ -1,0 +1,28 @@
+<!-- <view>
+  
+    <block wx:for="{{msgList}}" wx:for-item="item" wx:key>
+      <view class='li'>
+      
+          <view class='left'>
+              <image src="{{item.avatarPic}}"></image>
+          </view>
+
+      
+          <view class='right'>
+            <text class='content' id="{{item.cid}}">{{item.nickname}}{{item.type}} {{item.cid}}</text>
+            <text class='time'>{{item.rtime}}</text>
+          </view>
+      </view>
+    </block>  
+    
+</view> -->
+
+<view>
+  <block wx:for="{{notice}}" wx:key>
+    <view class='li'>
+      <text class='title'>{{item.title}}</text>
+      <text class='content'>{{item.content}}</text>
+      <text class='time fa fa-calendar' decode>&ensp;{{item.time}}</text>
+    </view>
+  </block>
+</view>

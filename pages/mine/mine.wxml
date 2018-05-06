@@ -1,0 +1,19 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <!-- <view class='li'> -->
+    <text class='fa fa-edit item' bindtap='alterUserInfo' decode="{{true}}">&ensp;修改基本信息<text class='fa fa-angle-right right'></text></text>
+    <text class='fa fa-bullhorn item' bindtap='alternotice' decode="{{true}}" >&ensp;吉首大学公告栏<text class='fa fa-angle-right right'></text></text>
+    <text class='fa fa-gift item' bindtap='altermoney' decode="{{true}}">&ensp;赞赏<text class='fa fa-angle-right right'></text></text>
+    <text class='fa fa-weixin item' bindtap='alterabout' decode="{{true}}">&ensp;关于小程序<text class='fa fa-angle-right right'></text></text>
+    <text class='fa fa-envelope-o item' bindtap='alterback' decode="{{true}}">&ensp;反馈<text class='fa fa-angle-right right'></text></text>
+    
+  <!-- </view> -->
+</view>

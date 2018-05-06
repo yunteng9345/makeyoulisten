@@ -1,0 +1,18 @@
+<!--pages/publish/publish.wxml-->
+
+
+
+<view class="section">
+  <form bindsubmit="formSubmit"  bindreset="formReset">
+    <textarea placeholder="这一刻的想法....." name="textarea" auto-focus />
+<!--
+    <button bindtap="upload_pic">上传图片</button>
+     -->
+    <text>是否匿名</text>
+    <switch name="switch"  bindchange="switch1Change"/><text>{{text1}}</text>
+    
+    
+    <button form-type="submit" type='primary'> 提交 </button>
+  </form>
+</view>
+

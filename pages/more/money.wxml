@@ -1,0 +1,4 @@
+<view>
+  <image src="{{money.moneyPic}}"></image>
+  <text>{{money.text}}</text>
+</view>

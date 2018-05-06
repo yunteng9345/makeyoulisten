@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/comment/comment",
+    "pages/story/story",
+    "pages/message/message",
+    "pages/mine/mine",
+    "pages/publish/publish",
+    "pages/logs/logs",
+    "pages/more/userInfo",
+    "pages/more/notice",
+    "pages/more/money",
+    "pages/more/about",
+    "pages/more/back"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "让你听",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "selectedIconPath": "/lib/1.png",
+        "iconPath": "/lib/1.png",
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "selectedIconPath": "/lib/2.png",
+        "iconPath": "/lib/2.png",
+        "pagePath": "pages/story/story",
+        "text": "音乐"
+      },
+      {
+        "selectedIconPath": "/lib/3.png",
+        "iconPath": "/lib/3.png",
+        "pagePath": "pages/message/message",
+        "text": "公告"
+      },
+      {
+        "selectedIconPath": "/lib/4.png",
+        "iconPath": "/lib/4.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
+}
