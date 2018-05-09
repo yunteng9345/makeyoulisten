@@ -10,6 +10,8 @@ Page({
     isLike: [],
     len:0,
     recordtxt: "点击录音",
+    flag:true,
+    txt:''
   },
 
   onLoad(option) {
@@ -44,21 +46,27 @@ Page({
 
       },
     })
+  },
 
-
-
+  changeTo1(e) {
+    this.setData({
+      flag: true
+    })
+  },
+  changeTo0(e) {
+    this.setData({
+      flag: false
+    })
   },
 
   /*点击录音*/
   press() {
-
     this.setData({
       recordtxt:"正在录音......",
      
     })
-
     const options = {
-      duration: 60000,
+      duration: 10000,
       sampleRate: 44100,
       numberOfChannels: 1,
       encodeBitRate: 320000,
@@ -71,57 +79,83 @@ Page({
     });
   },
 
-  /*发送保存录音*/
-  submit() {
-
+  /*发送*/
+  txtinput(e){
+    // console.log(e.detail.value)
     this.setData({
-      recordtxt: "点击录音"
+      txt: e.detail.value
     })
+  },
+  submit(option) {
+      var _this=this
+      if(this.data.flag==true){ //文本提交
+       this.txtinput()
+       console.log("最后:"+this.data.txt)
+       
+       console.log(option.currentTarget.id)
+       wx.getStorage({
+         key: 'openId',
+         success: function (res) {
+            wx.request({
+              method:'GET',
+              url: 'http://localhost:8080/MakeYouListen/voice/addVoiceText',
+              header: {
+                'content-type': 'application/json' // 默认值
+              },
+              data:{
+                'vtext':_this.data.txt,
+                'openId': res.data,
+                'tid': tid
+              }
 
-
-    // var that = this;
-    //var tid = option.tid;
-    console.log(tid)
-    recorderManager.stop();
-    recorderManager.onStop((res) => {
-      var tempFilePath = res.tempFilePath;// 文件临时路径
-      console.log('停止录音', res.tempFilePath)
-      //const { tempFilePath } = res
-      wx.getStorage({
-        key: 'openId',
-        success: function (res) {
-          console.log(res.data)
-          wx.uploadFile({
-            url: 'https://www.yunteng0923.cn/MakeYouListen/voice/addVoice',
-            filePath: tempFilePath,
-            name: 'file',
-            header: {
-              'content-type': 'multipart/form-data'
-            },
-
-            formData: {
-              'openId': res.data,
-              'tid': tid
-            },
+            })
+            // _this.setData({
+            //   txt: ""
+            // })
+         }
+       })
+      
+  
+      }
+      else {   //语音提交
+        this.setData({
+          recordtxt: "点击录音"
+        })
+        console.log(tid)
+        recorderManager.stop();
+        recorderManager.onStop((res) => {
+          var tempFilePath = res.tempFilePath;// 文件临时路径
+          console.log('停止录音', res.tempFilePath);
+          wx.getStorage({
+            key: 'openId',
             success: function (res) {
+              console.log(res.data)
+              wx.uploadFile({
+                url: 'https://www.yunteng0923.cn/MakeYouListen/voice/addVoice',
+                filePath: tempFilePath,
+                name: 'file',
+                header: {
+                  'content-type': 'multipart/form-data'
+                },
+                formData: {
+                  'openId': res.data,
+                  'tid': tid
+                },
+                success: function (res) {
+                  console.log('文件上传成功')
+                  //跳转后显示录音
+                  wx.redirectTo({
+                    url: '../comment/comment?tid=' + tid,
+                  })
+                }
+              })
 
-              //var data = res.data
-              console.log('文件上传成功')
-
-              //跳转后显示录音
-              wx.redirectTo({
-                url: '../comment/comment?tid='+tid,
-              })    
-            }
+            },
           })
-
-        },
-      })
-    
-        
-    })
-
-    console.log("提交录音")
+        })
+        console.log("提交录音")
+      }
+   
   },
 
 

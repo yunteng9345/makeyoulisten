@@ -1,6 +1,3 @@
 <view>
-  <!-- 故事音频的渲染 -->
-  <block wx:for="{{storyList}}" wx:for-item="item" wx:key>
-    <audio controls poster='{{item.coverPic}}' src="{{item.url}}" name="{{item.name}}" author='{{item.author}}'></audio>
-  </block>
+  
 </view>

@@ -63,10 +63,16 @@ background-repeat: no-repeat;
    display: flex;direction: column;height: 40px;
    position: fixed;bottom: 0;width: 100%;background: #FFA500;
 }
+.dialog image{
+   position: absolute;bottom: 0;left: 3%;width: 10%;height:30px;
+}
 .record{
-  width: 75%; margin-left: 0.5rem;font-size:14px;line-height: 40px;
+ position: absolute;bottom: 0;left: 16%;width: 55%;height:30px;line-height: 30px;
+}
+.dialog input{
+  border:1px solid gray;
 }
 .submit{
-  width: 20%; margin: 0 0.2rem;font-size:14px;line-height: 40px;
+ position: absolute;bottom: 0;left: 75%;width: 25%;height:30px;line-height: 30px;
 }
 

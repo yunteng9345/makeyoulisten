@@ -35,8 +35,11 @@
 
   <!-- 底部固定发送消息 -->
   <view class="dialog">
-    <button plain class='record' bindtap='press'>{{recordtxt}}</button>
-    <button plain class='submit' bindtap='submit'>发送</button> 
+    <image src="../../lib/record.png" wx:if="{{flag}}" bindtap='changeTo0'></image>
+    <image src="../../lib/keyset.png" wx:else  bindtap='changeTo1'></image>
+    <input type='text' wx:if="{{flag}}" class='record' bindinput='txtinput' value="{{txt}}"></input>
+    <button plain class='record'wx:else bindtap='press'>{{recordtxt}}</button>
+    <button plain class='submit' bindtap='submit' size='mini' id="{{theme.tid}}">发送</button> 
   </view>
   
 </view> 

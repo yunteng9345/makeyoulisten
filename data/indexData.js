@@ -157,62 +157,6 @@ var localIndexData={
           "rtime": "10分钟前"
         }
     ],
-    "story":[
-      {
-        "sid":"1",
-        "url":
-"http://oyop9bv8z.bkt.clouddn.com/%E5%85%B3%E5%96%86%20-%20%E6%83%B3%E5%AE%9A%E4%B8%8B%E6%9D%A5.mp3",
-        "coverPic": "http://oyop9bv8z.bkt.clouddn.com/xiaoqingxintupian4.jpg",
-        "name":"想定下来",
-        "author":"关喆"
-      },
-      {
-        "sid": "2",
-        "url":
-"http://oyop9bv8z.bkt.clouddn.com/%E6%88%91%E5%92%8C%E6%88%91%E7%9A%84%E4%B8%80%E4%B8%AA%E9%81%93%E5%A7%91%E6%9C%8B%E5%8F%8B.mp3",
-        "coverPic": "http://oyop9bv8z.bkt.clouddn.com/2483.jpg ",
-        "name": "我的一个道姑朋友",
-        "author": "和尚"
-      },
-      {
-        "sid": "3",
-        "url": "http://oyop9bv8z.bkt.clouddn.com/%E5%9B%9E%E9%9F%B3%E5%93%A5%20-%20%E4%BB%96%E5%92%8C%E5%A5%B9.mp3",
-        "coverPic": "http://oyop9bv8z.bkt.clouddn.com/xiaoqingxintupian2.jpg",
-        "name": "他和她",
-        "author": "回音哥"
-
-      },
-      {
-        "sid": "4",
-        "url": "http://oyop9bv8z.bkt.clouddn.com/%E8%83%A166%20-%20%E7%A9%BA%E7%A9%BA%E5%A6%82%E4%B9%9F.mp3",
-        "coverPic": "http://oyop9bv8z.bkt.clouddn.com/xiaoqingxintupian5.jpg",
-        "name": "空空如也",
-        "author": "胡66"
-      },
-      {
-        "sid": "5",
-        "url":
-        "https://m8.music.126.net/20180503183030/c1daffb365cba88ef24354d8c3802f6e/ymusic/ed1b/ded5/ba47/8f6bec7e55a47fb37c343fa551592ab2.mp3",
-        "coverPic": "https://p1.music.126.net/tbZaE-DjL_BkemynFlL1cQ==/109951163052534918.jpg",
-        "name": "纸短情长（完整版）",
-        "author": "烟把儿"
-      },
-      {
-        "sid": "6",
-        "url":
-        "https://m7.music.126.net/20180503183423/4454526bcfc3db68db045d72918b50b4/ymusic/b22a/2cea/7037/3592fc2d2e76b7ea8c458fa525030b3e.mp3",
-        "coverPic": "https://p1.music.126.net/QFXbRb-OOk-ThxtDyg8fjQ==/18618030395080088.jpg",
-        "name": "男孩",
-        "author": "梁博"
-      },
-      {
-        "sid": "7",
-        "url": "https://m7.music.126.net/20180503183545/f8807826d04bc518ea10172b6fde7c34/ymusic/c91b/17f3/70b9/1d8753528eb5196aa11de679df618cc7.mp3",
-        "coverPic": "https://p1.music.126.net/rxyLRMZdqzHdxyP5cl8qQA==/43980465112095.jpg",
-        "name": "遥远的她",
-        "author": "张学友"
-      }
-    ],
     "notice":[
       {
         "nid":"1",
