@@ -2,18 +2,20 @@
 <button bindtap='biaobai'>表白</button>
   <view wx:for="{{professList}}" wx:key class="li">
       <view class='up'>
-        <image src="{{item.pavatar}}"></image>
-        <text class='name'>{{item.pname}}</text>
-        <text class='sex'>{{item.psex}}</text>
-         <text class='object'>{{item.pobject}}</text>
+        <image src="{{item.uicon}}" wx:if="{{item.isShowName==0}}"></image>
+         <image src="../../lib/1.png" wx:else></image>
+        <text class='name' wx:if="{{item.isShowName==0}}">{{item.uname}}</text>
+        <text class='name' wx:else>吃瓜群众</text>
+        <text class='sex'>{{item.usex}}</text>
+         <!-- <text class='object'>{{item.pobject}}</text> -->
       </view>
       <view class='middle'>
-          <text wx:if="{{item.pcontent}}">{{item.pcontent}}</text>
-          <image wx:if="{{item.pimg}}" src="{{item.pimg}}" bindtap='preview' data-src="{{item.pimg}}"></image>
+          <text wx:if="{{item.lcontent}}">{{item.lcontent}}</text>
+          <image wx:if="{{item.picaddr}}" src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}" bindtap='preview' data-src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}"></image>
       </view>
       <view class='down'>
           <text class='fa fa-comment' decode></text>
-          <text class='time' decode>{{item.ptime}}</text>
+          <text class='time' decode>{{item.ltime}}</text>
       </view>
   </view>
   

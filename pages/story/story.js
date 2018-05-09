@@ -5,8 +5,18 @@ Page({
     imgList:[]
   },
   onLoad(options){
-    this.setData({
-      professList: proData.proList.data.profess
+   var that = this;
+    wx.request({
+      method: "GET",
+      url: 'https://www.yunteng0923.cn/MakeYouListen/lovewall/showAllLove',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        that.setData({
+          professList: res.data.allLoves
+        })
+      }
     })
   },
 

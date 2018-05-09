@@ -1,22 +1,25 @@
 /* pages/mine/mine.wxss */
 
 page{
- 
+ color:black;
 }
 /*显示用户图像，昵称，背景图片*/
 .userinfo {
-  display: flex;flex-direction: column;height: 100%;/*
-   background: url(https://www.yunteng0923.cn/MakeYouListen/voices/bj1.jpg) no-repeat; */
+  display: flex;flex-direction: row;height: 100%;
+   
   background-size: 100% 100%;
 }
-.userinfo button{
-  margin: auto;
+.userinfo .userleft{
+  width: 40%;
+}
+.userinfo .userright{
+  width: 100%;margin-top:1rem;
 }
 .userinfo-avatar {
-  width: 80px;height: 80px; border-radius: 50%;margin: 2rem auto 0.8rem auto;
+  width: 80px;height: 80px; border-radius: 50%;margin: 3.5rem 0.2rem;
 }
-.userinfo-nickname {
-  color:#fff;margin: 0 auto;
+.info{
+  display: block;padding:0.2rem;height: 30px;line-height: 30px;
 }
 
 .item{

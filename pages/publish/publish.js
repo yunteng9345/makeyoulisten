@@ -7,7 +7,8 @@ Page({
    */
   data: {
     text1: "",
-    pics: []
+    picaddr:[],
+    imgList:[]
 
   },
 
@@ -27,12 +28,13 @@ Page({
   },
   choose() {
     var that =this;
+
     wx.chooseImage({
       count: 1, // 默认9
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function (res) {
-        tempFilePaths = res.tempFilePaths
+        tempFilePaths = res.tempFilePaths[0]
       that.setData({
         picaddr:tempFilePaths
       })
@@ -42,7 +44,7 @@ Page({
     if (tempFilePaths[0] == '0') {
       wx.showModal({
         title: '温馨提示',
-        content: '为了我们专区的美观，所以必须有一张图片，且目前只能有一张！',
+        content: '为了页面的美观，必须放一张图片！',
         success: function (res) {
           if (res.confirm) {
             console.log('用户点击确定')
@@ -60,8 +62,23 @@ Page({
 
   //提交表单数据
   formSubmit: function (e) {
-   
     var that = this;
+    if (this.data.picaddr.length==0){
+      wx.showModal({
+        title: '温馨提示',
+        content: '为了页面的美观，必须放一张图片！',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            //修改内容后跳转到首页
+            wx.reLaunch({
+              url: '../publish/publish',
+            })
+          }
+        }
+      })
+    }
+    
     var textarea = e.detail.value.textarea;
     var switch1;
     if (e.detail.value.switch == true) switch1 = "1";
@@ -74,8 +91,8 @@ Page({
       success: function (res) {
         wx.uploadFile({
            
-          url: 'http://localhost:8080/MakeYouListen/lovewall/publish',
-          filePath: tempFilePaths[0],
+          url: 'https://www.yunteng0923.cn/MakeYouListen/lovewall/publish',
+          filePath: tempFilePaths,
           name: 'picfile',
           header: {
             'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
@@ -89,7 +106,9 @@ Page({
           },
           success: function (res) {
             console.log('文件上传成功')
-            
+            wx.reLaunch({
+              url: '../story/story',
+            })
           }
         })
 
@@ -100,6 +119,22 @@ Page({
   },
   formReset: function () {
     console.log('form发生了reset事件')
+  },
+
+  preview(e) {
+    var src = e.currentTarget.id;
+    var _this = this
+    _this.data.imgList.push(src)
+    this.setData({
+      imgList: _this.data.imgList
+    })
+    wx.previewImage({
+      // current: src, 可左右滑动
+      urls: _this.data.imgList,
+    })
+    this.setData({
+      imgList: []
+    })
   },
 
   /**

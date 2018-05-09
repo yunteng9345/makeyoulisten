@@ -15,12 +15,6 @@ Page({
       url: '../more/userInfo',
     })
   },
-  //跳转到修改公告页面
-  alternotice(){
-    wx.navigateTo({
-      url: '../more/notice',
-    })
-  },
   //跳转到修改赞赏页面
   altermoney() {
     wx.navigateTo({
@@ -40,31 +34,49 @@ Page({
     })
   },
   onLoad: function () {
-    var that = this
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+    // var that = this
+    // if (app.globalData.userInfo) {
+    //   this.setData({
+    //     userInfo: app.globalData.userInfo,
+    //     hasUserInfo: true
+    //   })
+    // } else if (this.data.canIUse) {
+    //   app.userInfoReadyCallback = res => {
+    //     this.setData({
+    //       userInfo: res.userInfo,
+    //       hasUserInfo: true
+    //     })
+    //   }
+    // } else {
+    //   // 在没有 open-type=getUserInfo 版本的兼容处理
+    //   wx.getUserInfo({
+    //     success: res => {
+    //       app.globalData.userInfo = res.userInfo
+    //       this.setData({
+    //         userInfo: res.userInfo,
+    //         hasUserInfo: true
+    //       })
+    //     }
+    //   })
+    // }
+    var _this = this
+    wx.getStorage({
+      key: 'openId',
+      success: function (res) {
+        wx.request({
+          url: 'https://www.yunteng0923.cn/MakeYouListen/user/showUserDetail',
+          data:{
+            openId:res.data
+            // openId: 'o_w9o5ATBCYs3S6zEy3XICZAzsmA'
+          },
+          success(res){
+            _this.setData({
+              userDetail: res.data.userDetail
+            })
+          }
         })
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    })
   },
   getUserInfo(e) {
     console.log(e)

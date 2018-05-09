@@ -1,13 +1,4 @@
 <!--pages/more/back.wxml-->
 <view>
-  <text class='title'>问题和意见</text>
-  <input type="text" placeholder='请简要描述你的问题和意见' placeholder-class="in"></input>
-  <text class='title'>图片(选填，提供问题截图)</text>
-  <view class='upload'>
-    <image wx:if="{{imgList}}" wx:for="{{imgList}}" src="{{item}}" wx:key></image>
-    <image src="../../lib/upload.png" bindtap='upload'></image>
-  </view>
-  <text class='title'>联系电话</text>
-  <input type='number' placeholder='选填，便于我们联系你' placeholder-class="in"></input >
-  <button type='primary'>提交</button>
+  反馈页面---正在开发中，github测试
 </view>

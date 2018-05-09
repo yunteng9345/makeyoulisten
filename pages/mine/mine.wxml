@@ -1,16 +1,21 @@
 <!--pages/mine/mine.wxml-->
 <view>
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain> 获取头像昵称 </button>
-    <block wx:else>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+      <view class='userleft'>
+        <image class="userinfo-avatar" src="{{userDetail.uicon}}"></image>
+      </view>
+     <view class='userright'>
+        <text class="userinfo-nickname info">昵称：{{userDetail.uname}}</text>
+        <text class="userinfo-sex info">性别：{{userDetail.usex}}</text>
+        <text class="userinfo-age info">年龄：{{userDetail.uage}}</text>
+        <text class="userinfo-uschool info">学院：{{userDetail.uschool}}</text>
+        <text class="userinfo-uschool info">院系：{{userDetail. uacademy}}</text>
+     </view>
+
   </view>
 
   <!-- <view class='li'> -->
     <text class='fa fa-edit item' bindtap='alterUserInfo' decode="{{true}}">&ensp;修改基本信息<text class='fa fa-angle-right right'></text></text>
-    <text class='fa fa-bullhorn item' bindtap='alternotice' decode="{{true}}" >&ensp;吉首大学公告栏<text class='fa fa-angle-right right'></text></text>
     <text class='fa fa-gift item' bindtap='altermoney' decode="{{true}}">&ensp;赞赏<text class='fa fa-angle-right right'></text></text>
     <text class='fa fa-weixin item' bindtap='alterabout' decode="{{true}}">&ensp;关于小程序<text class='fa fa-angle-right right'></text></text>
     <text class='fa fa-envelope-o item' bindtap='alterback' decode="{{true}}">&ensp;反馈<text class='fa fa-angle-right right'></text></text>
