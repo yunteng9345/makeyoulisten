@@ -10,8 +10,10 @@
      -->
     <text>是否匿名</text>
     <switch name="switch"  bindchange="switch1Change"/><text>{{text1}}</text>
-    
-    
+    <button bindtap='choose'>添加图片</button>
+
+ <image class="pic" src='{{picaddr}}'></image>
+
     <button form-type="submit" type='primary'> 提交 </button>
   </form>
 </view>

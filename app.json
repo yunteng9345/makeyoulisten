@@ -16,9 +16,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "white",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "让你听",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#a9b7b7",
@@ -36,7 +36,7 @@
         "selectedIconPath": "/lib/2.png",
         "iconPath": "/lib/2.png",
         "pagePath": "pages/story/story",
-        "text": "音乐"
+        "text": "5.20"
       },
       {
         "selectedIconPath": "/lib/3.png",

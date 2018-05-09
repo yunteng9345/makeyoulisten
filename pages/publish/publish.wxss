@@ -1,1 +1,21 @@
 /* pages/publish/publish.wxss */
+.picture_list {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.picture_item {
+  margin: 10px;
+  position: relative;
+  width: 160rpx;
+  height: 160rpx;
+}
+.picture_item image {
+  width: 160rpx;
+  height: 160rpx;
+}

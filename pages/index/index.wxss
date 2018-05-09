@@ -164,14 +164,17 @@ page{
 }
 /*一条主题样式*/
 .body{
- background: url(https://www.yunteng0923.cn/MakeYouListen/voices/bj1.jpg) no-repeat;
+  /*
+ background: url(https://www.yunteng0923.cn/MakeYouListen/voices/bj1.jpg) 
+ no-repeat;
+ */
  background-size: 100% 100%;
  margin: 1rem; border-radius: 10px;border:1px solid turquoise;height: 100%;
 }
 
 /*主题内容*/
 .topic{
-  display: block; width:95%; color:aliceblue; padding:0.5rem 0 0.8rem 0.5rem; font-size: 18px;
+  display: block; width:95%; color:black; padding:0.5rem 0 0.8rem 0.5rem; font-size: 18px;
 }
  /* .time{
    display: block; width:100%;  padding:0.3rem 40%; font-size: 12px;

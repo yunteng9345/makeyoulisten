@@ -1,12 +1,12 @@
 /* pages/mine/mine.wxss */
 
 page{
-  background: black;
+ 
 }
 /*显示用户图像，昵称，背景图片*/
 .userinfo {
-  display: flex;flex-direction: column;height: 100%;
-   background: url(https://www.yunteng0923.cn/MakeYouListen/voices/bj1.jpg) no-repeat; 
+  display: flex;flex-direction: column;height: 100%;/*
+   background: url(https://www.yunteng0923.cn/MakeYouListen/voices/bj1.jpg) no-repeat; */
   background-size: 100% 100%;
 }
 .userinfo button{

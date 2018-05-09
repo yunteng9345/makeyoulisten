@@ -24,18 +24,20 @@
   color: #333;
 } */
 page{
-  background-color: black;
+  
 }
 
 
 .li{ 
+  /*
   background-image: url(https://www.yunteng0923.cn/MakeYouListen/voices/bj1.jpg);
+  */
   background-size: 100% 100%;
   margin:1rem 0.5rem;border-radius: 5px;border: 1px solid salmon;
 }
 .li text{
   display: block;margin-top: 0.5rem;
-  color:white;
+  color:black;
 }
 .li .title{
   height: 20px;line-height: 20px;text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

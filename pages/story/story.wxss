@@ -1,7 +1,41 @@
 /*音频样式*/
 page{
-  background-color: black;
+  /*background-color: black;*/
+  color: black;
 }
-audio{
-  margin: 0.5rem 0 0 0.5rem;
+.li{
+  border: 1px solid white;margin: 1rem 0;
+}
+.up{
+  display: flex;direction: row;
+  height: 50px;line-height: 50px;margin: 0.5rem;
+}
+.up image{
+  position: absolute; width: 50px;height: 50px;border-radius: 50%;
+}
+.up .name{
+  position: absolute;left: 20%;width: 30%;
+}
+.up .sex{
+  position: absolute;left: 50%;width: 10%;
+}
+.up .object{
+  position: absolute;left: 60%;width: 40%;
+}
+.middle{
+  margin: 0.5rem;border-bottom: 1px solid red;
+}
+.middle image,.middle text{
+  width: 100%;padding:0.5rem 0;
+}
+.down{
+  display: flex;direction: row;height: 30px;line-height: 30px; margin: 0.5rem;
+}
+.dowm .fa{
+  position: absolute;
+  left: 0%;width: 40%;display: block;
+}
+.down .time{
+  position: absolute;
+  left: 40%;width: 60%;display: block;
 }

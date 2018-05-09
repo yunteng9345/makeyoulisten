@@ -5,10 +5,21 @@ Page({
 
   },
   onLoad() {
-    this.setData({
-      msgList: proData.proList.data.replay,
-      notice: proData.proList.data.notice
+    var that =this;
+    wx.request({
+      method:'GET',
+      url: 'https://www.yunteng0923.cn/MakeYouListen/notice/allNotices',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        that.setData({
+          notice:res.data.notices
+        })
+      
+      }
     })
+    
   }
 })
   
