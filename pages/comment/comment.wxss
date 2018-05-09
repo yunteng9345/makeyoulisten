@@ -1,6 +1,6 @@
 /* pages/comment/comment.wxss */
 page{
-  background-color:black;
+  background-color:#fff;
 }
 /*评论页面对应主题的渲染*/
 .li{

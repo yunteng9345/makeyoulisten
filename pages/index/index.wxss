@@ -154,7 +154,7 @@
 
 *************************/
 page{
-  background: black;
+  background: white;
 }
 
 /*主页轮播图样式*/

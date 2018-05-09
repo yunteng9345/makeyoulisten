@@ -98,7 +98,7 @@ Page({
          success: function (res) {
             wx.request({
               method:'GET',
-              url: 'http://localhost:8080/MakeYouListen/voice/addVoiceText',
+              url: 'https://www.yunteng0923.cn/MakeYouListen/voice/addVoiceText',
               header: {
                 'content-type': 'application/json' // 默认值
               },
@@ -113,6 +113,10 @@ Page({
             //   txt: ""
             // })
          }
+       })
+       //跳转后显示录音
+       wx.redirectTo({
+         url: '../comment/comment?tid=' + tid,
        })
       
   

@@ -16,7 +16,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#000000",
+    "navigationBarBackgroundColor": "white",
     "navigationBarTitleText": "让你听",
     "navigationBarTextStyle": "white"
   },
@@ -24,7 +24,7 @@
     "color": "#a9b7b7",
     "selectedColor": "#11cd6e",
     "borderStyle": "white",
-    "backgroundColor": "#000000",
+    "backgroundColor": "white",
     "list": [
       {
         "selectedIconPath": "/lib/1.png",
