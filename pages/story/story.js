@@ -8,7 +8,7 @@ Page({
    var that = this;
     wx.request({
       method: "GET",
-      url: 'https://www.yunteng0923.cn/MakeYouListen/lovewall/showAllLove',
+      url: 'http://localhost:8080/MakeYouListen/lovewall/showAllLove',
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -27,6 +27,14 @@ biaobai(){
   })
 }
 ,
+//跳转到表白评论页面
+lovecomment(e) {
+  var lno = e.currentTarget.id
+  wx.navigateTo({
+    url: "../lovecomment/lovecomment?lno=" + lno
+  })
+  console.log("跳转页面id"+lno)
+},
   preview(e){
     var src = e.currentTarget.dataset.src;
     var _this=this

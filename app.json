@@ -11,8 +11,8 @@
     "pages/more/notice",
     "pages/more/money",
     "pages/more/about",
-    "pages/more/back"
-    
+    "pages/more/back",
+    "pages/lovecomment/lovecomment"
   ],
   "window": {
     "backgroundTextStyle": "light",
