@@ -20,30 +20,30 @@ Page({
       key: 'openId',
       success: function (res) {
         
-        /*
+        
         wx.request({
           method: 'GET',
-          url: 'http://localhost:8080/MakeYouListen/voice/allMessage',
+          url: 'http://localhost:8080/MakeYouListen/loveComment/allLoveComment',
           header: {
             'content-type': 'application/json' // 默认值
           },
           data: {
-            tid: tid
+            lno: lno
           },
           success: function (res) {
 
-            console.log(res.data.theme.tcontent)
+            console.log(res.data.allLoveComment)
             that.setData({
               //Atopic: proData.proList.data.topic[option.tid],
-              voice: res.data.allVoice,
-              len: res.data.allVoice.length,
-              theme: res.data.theme
+              
+              allloveComment: res.data.allLoveComment
+
             })
 
           }
 
         })
-        */
+        
 
 
       },

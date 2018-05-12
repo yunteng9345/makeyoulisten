@@ -15,7 +15,7 @@
   </view>
 
   <!-- 评论的渲染 -->
-  <block wx:for="{{voice}}" wx:for-item="item"  wx:key >
+  <block wx:for="{{allloveComment}}" wx:for-item="item"  wx:key >
   <view class="commment">
     <view class='up'>
       <image src="{{item.uicon}}"></image>

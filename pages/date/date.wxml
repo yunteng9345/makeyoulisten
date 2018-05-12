@@ -1,0 +1,24 @@
+<!--pages/date/date.wxml-->
+<!--index.wxml-->
+<view class="container">
+  <view class="card_wrap">
+    <view bindtouchend="slidethis" animation="{{id === 0 ? animationData : ''}}" class="card_item card{{ id + 1 }} " wx:for="{{ cardInfoList }}"  wx:key="unique" wx:for-index="id" wx:for-item="item">
+      <span class="change_icon" bindtap="slidethis" wx:if="{{ id === 0 }}">
+        <image src="../../lib/changeicon.png"></image>
+      </span>
+      <view class="card_info">
+        <blockquote class="card_info_mes_title">{{ item.cardInfo.cardTitle }}</blockquote>
+
+        <span class="card_info_mes_item font-light content3" style="margin-top:50px;">
+          {{ item.cardInfo.cardInfoMes }}
+        </span>
+        <span class="card_info_mes_item font-light content3" style="margin-top:10px;">
+          {{ item.cardInfo.cardTime }}
+        </span>
+      </view>
+      <view class="btn-cta buy_btn" id="{{ id }}" bindtap="buythis">添加计划</view>
+      <image src="{{ item.cardUrl }}"></image>
+    </view>
+  </view>
+</view>
+

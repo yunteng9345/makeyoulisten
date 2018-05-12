@@ -91,7 +91,7 @@ Page({
       success: function (res) {
         wx.uploadFile({
            
-          url: 'https://www.yunteng0923.cn/MakeYouListen/lovewall/publish',
+          url: 'http://localhost:8080/MakeYouListen/lovewall/publish',
           filePath: tempFilePaths,
           name: 'picfile',
           header: {

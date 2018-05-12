@@ -12,7 +12,8 @@
     "pages/more/money",
     "pages/more/about",
     "pages/more/back",
-    "pages/lovecomment/lovecomment"
+    "pages/lovecomment/lovecomment",
+    "pages/date/date"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -41,7 +42,7 @@
       {
         "selectedIconPath": "/lib/3.png",
         "iconPath": "/lib/3.png",
-        "pagePath": "pages/message/message",
+        "pagePath": "pages/date/date",
         "text": "公告"
       },
       {
