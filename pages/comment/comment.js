@@ -88,38 +88,35 @@ Page({
   },
   submit(option) {
       var _this=this
-      if(this.data.flag==true){ //文本提交
-      //  this.txtinput()//
-       console.log("最后:"+this.data.txt)
-       
-       console.log(option.currentTarget.id)
-       wx.getStorage({
-         key: 'openId',
-         success: function (res) {
-            wx.request({
-              method:'GET',
-              url: 'https://www.yunteng0923.cn/MakeYouListen/voice/addVoiceText',
-              header: {
-                'content-type': 'application/json' // 默认值
-              },
-              data:{
-                'vtext':_this.data.txt,
-                'openId': res.data,
-                'tid': tid
-              }
-
-            })
-            // _this.setData({
-            //   txt: ""
-            // })
-         }
-       })
-       //跳转后显示录音
-       wx.redirectTo({
-         url: '../comment/comment?tid=' + tid,
-       })
-      
-  
+      if (this.data.flag == true) { //文本提交
+        if (this.data.txt != "") {
+          console.log("最后:" + this.data.txt + "评论id: " + option.currentTarget.id)
+          wx.getStorage({
+            key: 'openId',
+            success: function (res) {
+              wx.request({
+                method: 'GET',
+                url: 'https://www.yunteng0923.cn/MakeYouListen/voice/addVoiceText',
+                header: { 'content-type': 'application/json' },
+                data: {
+                  'vtext': _this.data.txt,
+                  'openId': res.data,
+                  'tid': tid
+                }
+              })
+            }
+          })
+          //跳转后显示录音
+          wx.redirectTo({
+            url: '../comment/comment?tid=' + tid,
+          })
+        }
+        else {
+          wx.showModal({
+            title: '文本不能为空',
+            content: '请在文本框中输入内容',
+          })
+        }
       }
       else {   //语音提交
         this.setData({

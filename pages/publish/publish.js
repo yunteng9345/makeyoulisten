@@ -85,8 +85,9 @@ Page({
         }
       })
     }
-    
+   
     var textarea = e.detail.value.textarea;
+    if (textarea!=""){
     var switch1;
     if (e.detail.value.switch == true) switch1 = "1";
     else switch1 = "0";
@@ -125,6 +126,15 @@ Page({
 
       },
     })
+    }
+
+    
+    else{
+      wx.showModal({
+        title: '文本不能为空',
+        content: '请在文本框中输入内容',
+      })
+    }
     
   },
   formReset: function () {

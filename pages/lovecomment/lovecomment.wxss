@@ -3,31 +3,36 @@
 page{
   background-color:#fff;
 }
-/*评论页面对应主题的渲染*/
+
+/* 改动 */
 .li{
-  padding:0.5rem 0; background:#FFA500; margin:0.5rem 1rem 0.3rem 1rem;
-  border: 2px solid saddlebrown; border-radius: 10px;
-} 
-.contents .topic{
-  display: block; width:100%;  color:black; font-size: 20px;
+  border: 1px solid white;margin: 1rem 0;
 }
-
-/*显示对应主题总评论*/
-.total{
-   margin: 0.3rem 1rem 0.5rem  1rem; font-family: sans-serif;font-size: 18px;
-   color:#fff;
+.up{
+  display: flex;direction: row;clear: both;
+  height: 50px;line-height: 50px;margin: 0.5rem 0.3rem;
 }
-
+.up avatar{
+   width: 50px;height: 50px;border-radius:50%; margin:5px;float: left;
+}
+.up .name{
+  position: absolute;left: 20%;width: 30%;
+}
+.xia,.total{
+  margin: 0.5rem;
+}
+.xia .content{
+  display: block;
+}
+.xia image{
+  width: 100%;
+}
 .dibu{
   margin-bottom: 30px;
 }
 
 
-.up{
-  background-size: 100% auto; 
-background-repeat: no-repeat; 
 
-}
 /*评论部分的样式*/
 .commment{
   
@@ -70,11 +75,11 @@ background-repeat: no-repeat;
 .dialog image{
    position: absolute;bottom: 0;left: 3%;width: 10%;height:30px;
 }
-.record{
+/* .record{
  position: absolute;bottom: 0;left: 16%;width: 55%;height:30px;line-height: 30px;
-}
+} */
 .dialog input{
-  border:1px solid gray;
+ position: absolute;bottom: 0;left: 16%;width: 55%;height:30px;line-height: 30px; border:1px solid gray;
 }
 .submit{
  position: absolute;bottom: 0;left: 75%;width: 25%;height:30px;line-height: 30px;

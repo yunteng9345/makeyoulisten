@@ -1,21 +1,27 @@
 <!--pages/lovecomment/lovecomment.wxml-->
-
  <view>
   <!-- 评论页面对应主题的渲染 -->
-  <view class='li'>
-      <view class="contents">
-          <text class='topic'>{{loveWallTheme.lcontent}}</text>
-          
-      </view>
+   <view class="li">
+    <view class='up'>
+      <image src="{{uicon}}" wx:if="{{loveWallTheme.isShowName==0}}" class='avatar'></image>
+      <image src="../../lib/1.png" wx:else class='avatar'></image>
+      <text class='name' wx:if="{{loveWallTheme.isShowName==0}}">{{uname}}</text>
+      <text class='name' wx:else>匿名社会人</text>
+    </view>
+    <view class='xia'>
+      <text class='content'>{{loveWallTheme.tcontent}}</text>
+      <image src="https://www.yunteng0923.cn/MakeYouListen/pic/{{loveWallTheme.picaddr}}" bindtap='preview' data-src="https://www.yunteng0923.cn/MakeYouListen/pic/{{loveWallTheme.picaddr}}"></image>
+    </view>
   </view>
 
   <!-- 显示对应主题总评论 -->
   <view class='total'>
-    <text>共{{len}}条评论</text>
+    <text>共{{allLoveComment.length}}条评论</text>
   </view>
 
+  <text>{{allloveComment}}</text>
   <!-- 评论的渲染 -->
-  <block wx:for="{{allloveComment}}" wx:for-item="item"  wx:key >
+  <block wx:for="{{allLoveComment}}" wx:for-item="item"  wx:key >
   <view class="commment">
     <view class='up'>
       <image src="{{item.uicon}}"></image>
@@ -28,20 +34,15 @@
     <view class='down'>
         <image src="../../lib/vioce.png" bindtap='playvoice' id="{{item.vid}}" data-shopId="{{index}}" wx:if="{{item.vaddr}}"></image>
         <text wx:else>{{item.lccontent}}</text>
-      
-         <!-- <button type='warn' plain size="mini"><text class=' fa fa-commenting'></text></button> 
-         <text>{{nowplay}}</text> 
-        <button type='warn' plain size="mini" bindtap='clike' id="{{index}}"><text class="{{isLike[index]==true?'fa fa-thumbs-up':'fa fa-thumbs-o-up'}}"></text></button>  -->
     </view>
   </view>
   </block>
 
   <!-- 底部固定发送消息 -->
   <view class="dialog">
-    
-    <image src="../../lib/keyset.png" ></image>
-   <input type='text'  class='record' bindinput='txtinput' value="{{txt}}"></input>
-    <button plain class='submit' bindtap='submit' size='mini' id="{{theme.tid}}">发送</button> 
+    <image src="../../lib/keyset.png"></image>
+    <input type='text' class='record' bindinput='txtinput' value="{{txt}}"></input>
+    <button plain class='submit' bindtap='submit' size='mini' id="{{loveWallTheme.lno}}">发送</button> 
   </view>
   
 </view> 

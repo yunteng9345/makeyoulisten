@@ -30,7 +30,10 @@ Page({
   },
   /***下拉刷新 */
   onPullDownRefresh: function () {
-    wx.startPullDownRefresh()
+    
+    wx.reLaunch({
+      url: './index',
+    })
   },  
   onLoad: function () {
 
@@ -90,5 +93,12 @@ Page({
     this.setData({
       isLike: this.data.isLike
     })
+  },
+  onShareAppMessage() {
+    return {
+      title: '让你听',
+      // imageUrl: 'https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=4189426594,1205851465&fm=202&mola=new&crop=v1',
+      path: './index',
+    }
   }
 })

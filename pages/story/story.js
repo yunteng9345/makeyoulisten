@@ -6,6 +6,13 @@ Page({
     //damoHeight: '100',//demo高度
     //arry: [false],//图片数组是否显示
   },
+  /***下拉刷新 */
+  onPullDownRefresh: function () {
+
+    wx.reLaunch({
+      url: './story',
+    })
+  }, 
 
   //滚动页面实行懒加载
   /*
@@ -79,5 +86,15 @@ preview(e){
     this.setData({
       imgList: []
     })
+  },
+  onShareAppMessage() {
+    return {
+      title: '给你爱的他/她',
+      imageUrl: 'https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=4189426594,1205851465&fm=202&mola=new&crop=v1',
+      path: './biaobai',
+      // success: function (res) {
+
+      // }
+    }
   }
 })

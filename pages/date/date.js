@@ -22,5 +22,11 @@ Page({
       }
     })
     
+  },
+  onPullDownRefresh: function () {
+
+    wx.reLaunch({
+      url: './date',
+    })
   }
 })
