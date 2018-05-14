@@ -1,20 +1,27 @@
+
 <view>
-  <button bindtap='biaobai'>表白</button>
+  <!-- <button bindtap='biaobai' class="dibu">表白</button> -->
+  <image bindtap='biaobai' class="dibu" src='../../lib/lovebut.png'></image>
   <view wx:for="{{professList}}" wx:key class="li">
     <view class='up'>
       <image src="{{item.uicon}}" wx:if="{{item.isShowName==0}}"></image>
       <image src="../../lib/1.png" wx:else></image>
       <text class='name' wx:if="{{item.isShowName==0}}">{{item.uname}}</text>
-      <text class='name' wx:else>吃瓜群众</text>
+      <text class='name' wx:else>匿名社会人</text>
       <!-- <text class='sex'>{{item.usex}}</text> -->
       <!-- <text class='object'>{{item.pobject}}</text> -->
     </view>
     <view class='middle'>
       <text wx:if="{{item.lcontent}}">{{item.lcontent}}</text>
-      <image wx:if="{{item.picaddr}}" src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}" bindtap='preview' data-src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}"></image>
+      <!-- <scroll-view bindscroll="scroll" style="height:{{clientHeight}}px;" class="container_wrap" scroll-y="true"> -->
+       <image src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}" bindtap='preview' data-src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}"></image> 
+
+
+    <!-- </scroll-view> -->
     </view>
     <view class='down'>
-      <text bindtap='lovecomment' id="{{item.lno}}"  class='fa fa-comment' decode >评论</text>
+       <text bindtap='lovecomment' id="{{item.lno}}"  class='fa fa-comment' decode ></text> 
+      <!-- <image bindtap='lovecomment' id="{{item.lno}}" calss="fa" src='../../lib/comment.png'></image> -->
        <!-- <button type='primary' size="mini"  bindtap='comment' id="{{item.tid}}" class='left'>进入</button> -->
       <text class='time' decode>{{item.ltime}}</text>
     </view>

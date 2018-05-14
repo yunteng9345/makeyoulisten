@@ -28,26 +28,26 @@
     "backgroundColor": "white",
     "list": [
       {
-        "selectedIconPath": "/lib/1.png",
-        "iconPath": "/lib/1.png",
+        "selectedIconPath": "/lib/index.png",
+        "iconPath": "/lib/index.png",
         "pagePath": "pages/index/index",
         "text": "主页"
       },
       {
-        "selectedIconPath": "/lib/2.png",
-        "iconPath": "/lib/2.png",
+        "selectedIconPath": "/lib/love.png",
+        "iconPath": "/lib/love.png",
         "pagePath": "pages/story/story",
         "text": "5.20"
       },
       {
-        "selectedIconPath": "/lib/3.png",
-        "iconPath": "/lib/3.png",
+        "selectedIconPath": "/lib/notice.png",
+        "iconPath": "/lib/notice.png",
         "pagePath": "pages/date/date",
         "text": "公告"
       },
       {
-        "selectedIconPath": "/lib/4.png",
-        "iconPath": "/lib/4.png",
+        "selectedIconPath": "/lib/mine.png",
+        "iconPath": "/lib/mine.png",
         "pagePath": "pages/mine/mine",
         "text": "我的"
       }

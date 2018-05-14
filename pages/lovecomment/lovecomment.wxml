@@ -1,11 +1,11 @@
 <!--pages/lovecomment/lovecomment.wxml-->
-<text>pages/lovecomment/lovecomment.wxml</text>
-<!--pages/comment/comment.wxml-->
+
  <view>
   <!-- 评论页面对应主题的渲染 -->
   <view class='li'>
       <view class="contents">
-          <text class='topic'>{{theme.tcontent}}</text>
+          <text class='topic'>{{loveWallTheme.lcontent}}</text>
+          
       </view>
   </view>
 
@@ -27,7 +27,7 @@
     <view style='clear:both;'></view>
     <view class='down'>
         <image src="../../lib/vioce.png" bindtap='playvoice' id="{{item.vid}}" data-shopId="{{index}}" wx:if="{{item.vaddr}}"></image>
-        <text wx:else>{{item.vtext}}</text>
+        <text wx:else>{{item.lccontent}}</text>
       
          <!-- <button type='warn' plain size="mini"><text class=' fa fa-commenting'></text></button> 
          <text>{{nowplay}}</text> 
@@ -38,10 +38,9 @@
 
   <!-- 底部固定发送消息 -->
   <view class="dialog">
-    <image src="../../lib/record.png" wx:if="{{flag}}" bindtap='changeTo0'></image>
-    <image src="../../lib/keyset.png" wx:else  bindtap='changeTo1'></image>
-    <input type='text' wx:if="{{flag}}" class='record' bindinput='txtinput' value="{{txt}}"></input>
-    <button plain class='record'wx:else bindtap='press'>{{recordtxt}}</button>
+    
+    <image src="../../lib/keyset.png" ></image>
+   <input type='text'  class='record' bindinput='txtinput' value="{{txt}}"></input>
     <button plain class='submit' bindtap='submit' size='mini' id="{{theme.tid}}">发送</button> 
   </view>
   

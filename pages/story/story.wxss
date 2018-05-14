@@ -1,19 +1,25 @@
 /*音频样式*/
 page{
-  /*background-color: black;*/
+  background-color:aliceblue;
   color: black;
+  /*margin: 0rpx 40rpx 0rpx 40rpx*/
+
 }
 .li{
   border: 1px solid white;margin: 1rem 0;
+  background-color:white;
 }
 .up{
   display: flex;direction: row;
   height: 50px;line-height: 50px;margin: 0.5rem;
+  background-color:pink;
+  border-radius: 10px;
 }
 .up image{
   position: absolute; width: 50px;height: 50px;border-radius: 50%;
 }
 .up .name{
+  color:red;
   position: absolute;left: 20%;width: 30%;
 }
 .up .sex{
@@ -23,10 +29,14 @@ page{
   position: absolute;left: 60%;width: 40%;
 }
 .middle{
-  margin: 0.5rem;border-bottom: 1px solid red;
+  margin: 0.5rem;border-bottom: 1px solid pink;
+   
 }
 .middle image,.middle text{
   width: 100%;padding:0.5rem 0;
+  height:320px;
+ 
+
 }
 .down{
   display: flex;direction: row;height: 30px;line-height: 30px; margin: 0.5rem;
@@ -38,4 +48,8 @@ page{
 .down .time{
   position: absolute;
   left: 40%;width: 60%;display: block;
+}
+.dibu{
+   display: flex;direction: column;height: 40px;width: 40px;border-radius: 50%;
+   position: fixed;bottom: 5%;left:80%;background: white;z-index: 9999;
 }

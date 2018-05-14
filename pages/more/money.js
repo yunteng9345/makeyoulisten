@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    imgList: ['http://oyop9bv8z.bkt.clouddn.com/money.png']
   },
 
   /**
@@ -65,5 +65,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  previewImage(){
+    wx.previewImage({
+      urls: this.data.imgList
+    })
   }
 })

@@ -11,6 +11,13 @@ Page({
     imgList:[]
 
   },
+  //返回
+  back: function () {
+    wx.reLaunch({
+      url: '../story/story',
+    })
+
+  },
 
   //滑块是否匿名事件
   switch1Change: function (e) {
@@ -91,7 +98,7 @@ Page({
       success: function (res) {
         wx.uploadFile({
            
-          url: 'http://localhost:8080/MakeYouListen/lovewall/publish',
+          url: 'https://www.yunteng0923.cn/MakeYouListen/lovewall/publish',
           filePath: tempFilePaths,
           name: 'picfile',
           header: {
@@ -109,6 +116,9 @@ Page({
             wx.reLaunch({
               url: '../story/story',
             })
+          },
+          fail:function (res) {
+              console.log("cuowu")
           }
         })
 

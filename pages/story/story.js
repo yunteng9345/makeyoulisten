@@ -1,25 +1,54 @@
 const app=getApp()
-var proData=require('../../data/indexData.js')
 Page({
   data:{
     imgList:[]
+   // imgUrls:[],
+    //damoHeight: '100',//demo高度
+    //arry: [false],//图片数组是否显示
   },
+
+  //滚动页面实行懒加载
+  /*
+  onPageScroll: function (res) {
+    var _this = this;
+    //console.log(res.scrollTop);
+    var str = parseInt(res.scrollTop / _this.data.damoHeight);
+    _this.data.arry[str] = true;
+    _this.setData({
+      arry: _this.data.arry
+    })
+  },
+  */
+
+
   onLoad(options){
+  
    var that = this;
     wx.request({
       method: "GET",
-      url: 'http://localhost:8080/MakeYouListen/lovewall/showAllLove',
+      url: 'https://www.yunteng0923.cn/MakeYouListen/lovewall/showAllLove?',
       header: {
         'content-type': 'application/json' // 默认值
       },
-      success: function (res) {
-        that.setData({
+      success:  res=> {
+        
+        this.setData({
           professList: res.data.allLoves
         })
-      }
-    })
-  },
+        /*
+        for (let i = 0; i < this.data.professList.length;i++){
+          this.data.imgUrls[i] = 'https://www.yunteng0923.cn/MakeYouListen/pic/'+this.data.professList[i].picaddr
+        }
+        this.setData({
+          imgUrls: that.data.imgUrls
+        })
 
+        */
+        //console.log(this.data.imgUrls.length)
+
+      }
+  })
+},
 //表白跳转
 biaobai(){
   wx.navigateTo({
@@ -35,7 +64,8 @@ lovecomment(e) {
   })
   console.log("跳转页面id"+lno)
 },
-  preview(e){
+//图片预览
+preview(e){
     var src = e.currentTarget.dataset.src;
     var _this=this
     _this.data.imgList.push(src)

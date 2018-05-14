@@ -89,7 +89,7 @@ Page({
   submit(option) {
       var _this=this
       if(this.data.flag==true){ //文本提交
-       this.txtinput()
+      //  this.txtinput()//
        console.log("最后:"+this.data.txt)
        
        console.log(option.currentTarget.id)
@@ -229,3 +229,4 @@ Page({
   }
 
 })
+

@@ -1,6 +1,6 @@
 /* pages/more/back.wxss */
 page{
-  background: #000000;
+ 
 }
 .title{
   display: block;height: 30px;line-height: 30px;

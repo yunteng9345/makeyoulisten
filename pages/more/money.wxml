@@ -1,4 +1,6 @@
 <view>
-  <image src="{{money.moneyPic}}"></image>
+ 
+  <image src="{{money.moneyPic}}" bindtap='previewImage'></image>
+
   <text>{{money.text}}</text>
 </view>

@@ -16,6 +16,7 @@
   </view>
 
     <button form-type="submit" type='primary'> 提交 </button>
+    <button bindtap='back' > 返回 </button>
   </form>
 </view>
 

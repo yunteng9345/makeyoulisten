@@ -1,12 +1,13 @@
 // pages/lovecomment/lovecomment.js
 var lno
+//var txt
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    txt: ''
   },
 
   /**
@@ -23,7 +24,7 @@ Page({
         
         wx.request({
           method: 'GET',
-          url: 'http://localhost:8080/MakeYouListen/loveComment/allLoveComment',
+          url: 'https://www.yunteng0923.cn/MakeYouListen/loveComment/allLoveComment',
           header: {
             'content-type': 'application/json' // 默认值
           },
@@ -32,10 +33,10 @@ Page({
           },
           success: function (res) {
 
-            console.log(res.data.allLoveComment)
+            //console.log(res.data.allLoveComment)
             that.setData({
               //Atopic: proData.proList.data.topic[option.tid],
-              
+              loveWallTheme: res.data.loveWallTheme,
               allloveComment: res.data.allLoveComment
 
             })
@@ -48,7 +49,6 @@ Page({
 
       },
     })
-  
   },
 
   /**
@@ -98,5 +98,48 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  txtinput(e) {
+   this.setData({
+      txt: e.detail.value
+    })
+  },
+  submit(option) {
+    var _this = this
+    
+    
+      console.log("最后:" + this.data.txt)
+
+      //console.log(option.currentTarget.id)
+      wx.getStorage({
+        key: 'openId',
+        success: function (res) {
+         // console.log("baibaiid"+lno)
+         // console.log(_this.data.txt)
+          wx.request({
+            method: 'GET',
+            url: 'https://www.yunteng0923.cn/MakeYouListen/loveComment/addLoveComment',
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            data: {
+              'lno': lno,
+              'openId': res.data,
+              'lccontent': _this.data.txt
+            },
+            success(res){
+              console.log("success")
+
+            }
+
+          })
+         
+        }
+      })
+      //跳转后显示录音
+      wx.redirectTo({
+        url: '../lovecomment/lovecomment?lno=' + lno,
+      })
+  },
+
 })
