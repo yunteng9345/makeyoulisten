@@ -69,12 +69,12 @@ Page({
       success: function (res) {
         wx.request({
           method: 'GET',
-          url: 'https://www.yunteng0923.cn/MakeYouListen/voice/addVoiceText',
+          url: 'https://www.yunteng0923.cn/MakeYouListen/loveComment/addLoveComment',
           header: { 'content-type': 'application/json' },
           data: {
-            'vtext': _this.data.txt,
+            'lccontent': _this.data.txt,
             'openId': res.data,
-            'tid': lno
+            'lno': lno
           }
         })
       }
@@ -137,9 +137,13 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
+  /*
   onPullDownRefresh: function () {
-
+    wx.reLaunch({
+      url: "../lovecomment/lovecomment?lno=" + lno
+    })
   },
+  */
 
   /**
    * 页面上拉触底事件的处理函数

@@ -123,12 +123,11 @@ Page({
           }
         })
 
-
       },
     })
     }
 
-    
+
     else{
       wx.showModal({
         title: '文本不能为空',
@@ -196,7 +195,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+      
+   
   },
 
   /**

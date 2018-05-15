@@ -223,7 +223,14 @@ Page({
     this.setData({
       isLike: _this.data.isLike
     })
-  }
+  },
+  //刷新
+  /*
+  onPullDownRefresh: function () {
+    wx.reLaunch({
+      url: '../comment/comment?tid=' + tid,
+    })
+  }*/
 
 })
 
