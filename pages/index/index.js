@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-const app = getApp()
+//const app = getApp()
 var proData=require('../../data/indexData.js')
 Page({
   data: {
@@ -52,7 +52,7 @@ Page({
     })
     //app.getOpenId();
     console.log('onLoad')
-    app.getOpenId();
+    //app.getOpenId();
     /*wx.getStorage({
       key: 'openId',
       success: function(res) {
@@ -98,7 +98,7 @@ Page({
     return {
       title: '让你听',
       // imageUrl: 'https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=4189426594,1205851465&fm=202&mola=new&crop=v1',
-      path: './index',
+      path: 'page/index/index',
     }
   },
   

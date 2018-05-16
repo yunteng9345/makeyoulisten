@@ -55,6 +55,7 @@ Page({
 
       }
   })
+    app.getOpenId();
 },
 //表白跳转
 biaobai(){
@@ -91,7 +92,7 @@ preview(e){
     return {
       title: '给你爱的他/她',
       imageUrl: 'https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=4189426594,1205851465&fm=202&mola=new&crop=v1',
-      path: './biaobai',
+      path: 'page/story/story',
       // success: function (res) {
 
       // }

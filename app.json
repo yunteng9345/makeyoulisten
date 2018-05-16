@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/story/story",
     "pages/index/index",
     "pages/comment/comment",
-    "pages/story/story",
     "pages/message/message",
     "pages/mine/mine",
     "pages/publish/publish",

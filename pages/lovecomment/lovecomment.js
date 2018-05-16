@@ -1,4 +1,5 @@
 // pages/lovecomment/lovecomment.js
+
 var lno
 Page({
   data: {
@@ -45,6 +46,7 @@ Page({
             })
           }
         })
+        
 
       },
     })
