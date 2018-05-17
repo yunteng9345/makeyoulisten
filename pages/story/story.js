@@ -33,7 +33,7 @@ Page({
    var that = this;
     wx.request({
       method: "GET",
-      url: 'https://www.yunteng0923.cn/MakeYouListen/lovewall/showAllLove?',
+      url: 'https://www.yunteng0923.cn/MakeYouListen/lovewall/showAllLove',
       header: {
         'content-type': 'application/json' // 默认值
       },
