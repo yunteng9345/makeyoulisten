@@ -24,11 +24,10 @@
   <block wx:for="{{allLoveComment}}" wx:for-item="item"  wx:key >
   <view class="commment">
     <view class='up'>
-      <image src="{{item.uicon}}"></image>
+      <!-- <image src="{{item.uicon}}"></image> -->
       <text class='nickname' wx:if="{{item.uname}}">{{item.uname}}</text>
       <text class='nickname' wx:else>吃瓜群众</text>
       <text class='time'>{{item.publishtime}}</text>
-      <!-- <text class='address'><text class='fa fa-location-arrow fa-lg'></text>{{item.uschool}}</text> -->
     </view>
     <view style='clear:both;'></view>
     <view class='down'>

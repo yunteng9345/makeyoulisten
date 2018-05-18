@@ -50,14 +50,11 @@ App({
                     key: "openId",
                     data: res.data.openId
                   })
-
                 },
                 fail: function (res) {
                   console.log('换取openid失败')
                 }
-
               })
-
 
             },
             fail: function (res) {

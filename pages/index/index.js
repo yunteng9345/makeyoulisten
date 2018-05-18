@@ -35,6 +35,11 @@ Page({
       url: './index',
     })
   },  
+  onGotUserInfo: function (e) {
+     console.log(e.detail.errMsg)
+     console.log(e.detail.userInfo)
+     console.log(e.detail.rawData)
+  },
   onLoad: function () {
 
     var that =this;

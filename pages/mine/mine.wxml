@@ -1,5 +1,6 @@
 <!--pages/mine/mine.wxml-->
 <view>
+   <!-- <button open-type='getUserInfo'>获取</button>  -->
   <view class="userinfo">
       <view class='userleft'>
         <image class="userinfo-avatar" src="{{userDetail.uicon}}"></image>
