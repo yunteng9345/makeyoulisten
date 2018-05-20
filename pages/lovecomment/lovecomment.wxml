@@ -9,8 +9,8 @@
       <text class='name' wx:else>匿名社会人</text>
     </view>
     <view class='xia'>
-      <text class='content'>{{loveWallTheme.tcontent}}</text>
-      <image src="https://www.yunteng0923.cn/MakeYouListen/pic/{{loveWallTheme.picaddr}}" bindtap='preview' data-src="https://www.yunteng0923.cn/MakeYouListen/pic/{{loveWallTheme.picaddr}}"></image>
+      <text class='content'>{{loveWallTheme.lcontent}}</text>
+      <image src="https://www.yunteng0923.cn/MakeYouListen/pic/{{loveWallTheme.picaddr}}" bindtap='preview' data-src="https://www.yunteng0923.cn/MakeYouListen/pic/{{loveWallTheme.picaddr}}" bindtap='preview' mode="widthFix"></image>
     </view>
   </view>
 

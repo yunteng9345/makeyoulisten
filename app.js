@@ -8,13 +8,14 @@ App({
     
   },
   getOpenId: function () {
-    var that=this;
+    
+   // var that=this;
     // 登录
+    /*
     wx.login({
       success: res => {
         if (res.code) {
           var code = res.code
-          /***获取用户身份信息 */
           wx.getUserInfo({
             success: function (res) {
               var userInfo = res.userInfo
@@ -25,7 +26,7 @@ App({
               if (userInfo.gender == 2) gender = "女"
               console.log(nickName);
               console.log(gender);
-              //向服务器发起登录请求
+             
               wx.request({
                 method: 'GET',
                 url: 'https://www.yunteng0923.cn/MakeYouListen/user/login',
@@ -67,7 +68,7 @@ App({
           console.log('登录失败！' + res.errMsg)
         }
       }
-    })
+    })*/
   },
   globalData: {
     userInfo: null

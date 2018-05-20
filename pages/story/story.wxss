@@ -33,6 +33,7 @@ page{
 }
 .up .name{
   position: absolute;left: 30%;width: 70%;font-size: 16px;
+  color:red;
 }
 .up .sex{
   position: absolute;left: 50%;width: 10%;

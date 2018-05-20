@@ -103,7 +103,7 @@ Page({
     return {
       title: '让你听',
       // imageUrl: 'https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=4189426594,1205851465&fm=202&mola=new&crop=v1',
-      path: 'page/index/index',
+      path: '/pages/index/index',
     }
   },
   

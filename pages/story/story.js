@@ -1,11 +1,13 @@
 const app=getApp()
 Page({
   data:{
-    imgList:[]
-   // imgUrls:[],
-    //damoHeight: '100',//demo高度
-    //arry: [false],//图片数组是否显示
+    imgList:[],
+   //判断小程序的API，回调，参数，组件等是否在当前版本可用。
+   // canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+/****用户授权*** */
+
+
   /***下拉刷新 */
   onPullDownRefresh: function () {
 
@@ -14,23 +16,11 @@ Page({
     })
   }, 
 
-  //滚动页面实行懒加载
-  /*
-  onPageScroll: function (res) {
-    var _this = this;
-    //console.log(res.scrollTop);
-    var str = parseInt(res.scrollTop / _this.data.damoHeight);
-    _this.data.arry[str] = true;
-    _this.setData({
-      arry: _this.data.arry
-    })
-  },
-  */
-
-
   onLoad(options){
+    //显示表白列表
+    var that = this;
+
   
-   var that = this;
     wx.request({
       method: "GET",
       url: 'https://www.yunteng0923.cn/MakeYouListen/lovewall/showAllLove',
@@ -42,20 +32,9 @@ Page({
         this.setData({
           professList: res.data.allLoves
         })
-        /*
-        for (let i = 0; i < this.data.professList.length;i++){
-          this.data.imgUrls[i] = 'https://www.yunteng0923.cn/MakeYouListen/pic/'+this.data.professList[i].picaddr
-        }
-        this.setData({
-          imgUrls: that.data.imgUrls
-        })
-
-        */
-        //console.log(this.data.imgUrls.length)
-
       }
   })
-    app.getOpenId();
+   // app.getOpenId();
 },
 //表白跳转
 biaobai(){
@@ -92,7 +71,7 @@ preview(e){
     return {
       title: '给你爱的他/她',
       imageUrl: 'https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=4189426594,1205851465&fm=202&mola=new&crop=v1',
-      path: 'page/story/story',
+      path: '/pages/story/story',
       // success: function (res) {
 
       // }

@@ -6,7 +6,8 @@
         </view>
         <image src="../../lib/flower_banner1_xcx.jpg" class="img"></image>
     </view>
-    
+
+
 
   <image bindtap='biaobai' class="dibu" src='../../lib/lovebut.png'></image>
  
@@ -22,7 +23,7 @@
     <view class='middle'>
       <text wx:if="{{item.lcontent}}">{{item.lcontent}}</text>
       <!-- <scroll-view bindscroll="scroll" style="height:{{clientHeight}}px;" class="container_wrap" scroll-y="true"> -->
-       <image src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}" bindtap='preview' data-src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}"></image> 
+       <image src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}" bindtap='preview' data-src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}"  mode="widthFix"></image> 
 
 
     <!-- </scroll-view> -->

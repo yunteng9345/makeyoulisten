@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/shouquan/shouquan",
     "pages/story/story",
     "pages/index/index",
     "pages/comment/comment",
@@ -14,6 +15,7 @@
     "pages/more/back",
     "pages/lovecomment/lovecomment",
     "pages/date/date"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
