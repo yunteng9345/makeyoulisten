@@ -1,1 +1,4 @@
 /* pages/shouquan/shouquan.wxss */
+.content{
+  color:darkorange
+}

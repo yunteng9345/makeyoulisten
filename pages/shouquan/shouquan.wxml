@@ -1,9 +1,10 @@
 <!--pages/shouquan/shouquan.wxml-->
 <image src="{{pic}}"></image>
-<text>由于微信api的更新，必须经过社会人的授权才可登录，请点击以下下按钮触发授权事件</text>
+<text class='content'>由于微信api的更新，必须经过社会人的授权才可登录，请点击以下下按钮触发授权事件</text>
 <button 
     wx:if="{{canIUse}}" 
     open-type="getUserInfo" 
+    type='primary'
     bindgetuserinfo="bindGetUserInfo"
 >授权登录</button>
 <view wx:else>请升级微信版本</view>
