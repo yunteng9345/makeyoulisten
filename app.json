@@ -42,10 +42,10 @@
         "text": "5.20"
       },
       {
-        "selectedIconPath": "/lib/notice.png",
-        "iconPath": "/lib/notice.png",
+        "selectedIconPath": "/lib/time.png",
+        "iconPath": "/lib/time.png",
         "pagePath": "pages/date/date",
-        "text": "公告"
+        "text": "时间机器"
       },
       {
         "selectedIconPath": "/lib/mine.png",
