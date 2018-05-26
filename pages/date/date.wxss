@@ -1,25 +1,64 @@
+/* pages/date/date.wxss */
 page{
-
+ color: black;
+}
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    /* padding-top: 60px; */
+    text-align: center;
+}
+.weui-tab__content .main{
+  height: 200px;
+}
+.weui-tab__content .main text{
+  display: block;
+}
+.main .name,.name{
+  font-weight: 800;padding: 3rem 0 0.5rem 0;font-size: 15px;
+}
+.main .tongyi,.tongyi{
+  padding: 0 0 0.8rem 0;font-size: 12px;
+}
+.main .sub,.sub{
+  font-weight: 700;padding: 0 0 1rem 0;font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.main .date,.date{
+  padding: 0 0 1rem 0;font-size: 12px;
+}
+button{
+  margin: 0 2rem;
 }
 
-.li{
-  /*background-image: url(https://www.yunteng0923.cn/MakeYouListen/voices/bj1.jpg);
-  background-size: 100% 100%;*/
-  margin:1rem 0.5rem;border-radius: 5px;border: 1px solid salmon;
+.body{
+ margin: 1rem 0.8rem; border-radius: 10px;border:1px solid turquoise;
+ display: flex;direction: row;height: 120px;position: relative;
 }
-.li text{
-  display: block;margin-top: 0.5rem;
-  color:black;
+.body image{
+  width: 30%;height: 100%;position: absolute;border-radius: 10px 0  0 10px ;
 }
-.li .title{
-  height: 20px;line-height: 20px;text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.body .right{
+  position: absolute;left: 35%;width: 65%;height: 100%;
 }
-.li .content{
-  height: 50px;line-height:25px;overflow: hidden;
+.right text{
+  display: block;font-weight: 400;
 }
-.li .time{
-  font-size: 15px;margin-bottom: 0.5rem;
+.right .name{
+ padding: 0.2rem 0;
 }
-.li .fa{
-  padding:0 0.5rem ;
+.right .tongyi{
+  padding: 0 0 0.3rem 0;
+}
+.right .sub{
+  padding: 0 0 0.3rem 0;
+}
+.right .date{
+  padding: 0 0 0.3rem 0;
 }

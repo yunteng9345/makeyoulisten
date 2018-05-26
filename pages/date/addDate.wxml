@@ -1,0 +1,30 @@
+<view class="body">
+    <view class='item'>
+      <label>名称</label>
+      <input type='text' placeholder='最对12个字' maxlength="12" bindinput='txtinput' value="{{txt}}"></input>
+    </view>
+     <view class='item'>
+      <label>日期</label>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          当前选择: {{date}}
+        </view>
+      </picker>
+    </view>
+    <view class='item'>
+      <label>设为主屏</label>
+      <switch bindchange="isMain"/>
+    </view>
+    <!-- <view class='item'>
+      <label bindtap='change'>上传背景图</label>
+      <view class='upload'>
+        <image wx:if="{{picaddr.length!=0}}" src="{{picaddr}}" bindtap='preview' id="{{picaddr}}"></image>
+        <image src="../../lib/upload.png" bindtap='choose'></image>
+      </view>
+    </view>  -->
+    <button type='primary' wx:if="{{edit==0}}" plain bindtap='create'>创建</button>
+    <button type='primary' wx:else plain  bindtap='save'>保存</button>
+
+    <button type='primary' wx:if="{{edit==0}}" plain bindtap='cancel'>取消</button>
+    <button type='primary' wx:else plain bindtap='delet'>删除</button>
+</view>

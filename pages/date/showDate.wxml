@@ -1,0 +1,14 @@
+<!--pages/date/showDate.wxml-->
+<view style="background:url('{{ListItem.bg}}') no-repeat;background-size:100% 100%; height:{{allHeight}}; text-align:center;">
+    <view class='main' style="height:({{allHeight}}-50)+'px';">
+      <text class="name">{{ListItem.name}}</text>
+      <text class="tongyi">已经</text>
+      <text class="sub">天数</text>
+      <text class="date">{{ListItem.date}}</text>
+    </view>
+
+    <view class='down'>
+        <text class='fa fa-clone change' bindtap='change' id="{{ListItem.id}}"></text>
+        <text class='fa fa-pencil-square-o edit' bindtap='edit' id="{{ListItem.id}}"></text>
+    </view>
+</view>

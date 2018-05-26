@@ -1,0 +1,30 @@
+/* pages/date/showDate.wxss */
+.main{
+  padding:35% 0;
+}
+.main text{
+  display: block;
+}
+.main .name,.name{
+  font-weight: 800;padding: 3rem 0 0.5rem 0;font-size: 15px;
+}
+.main .tongyi,.tongyi{
+  padding: 0 0 0.8rem 0;font-size: 12px;
+}
+.main .sub,.sub{
+  font-weight: 700;padding: 0 0 1rem 0;font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.main .date,.date{
+  padding: 0 0 1rem 0;font-size: 12px;
+}
+
+.down{
+  display: flex;direction: row;position: relative;
+  padding:0 40%;height: 50px;
+}
+.down .fa{
+  font-size: 24px; position: absolute;width: 8%;
+}
+.change{left: 40%;}
+.edit{left: 50%;}

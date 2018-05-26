@@ -1,39 +1,36 @@
-
- <view class='swiper' style='height:200px;'>
-        <view style='background:#FFC0CB;height:60%;'>
-        </view>
-        <view style='height:40%;'>
-        </view>
-        <image src="../../lib/flower_banner1_xcx.jpg" class="img"></image>
-    </view>
-
+<view class='swiper' style='height:200px;'>
+  <view style='background:#FFC0CB;height:60%;'>
+  </view>
+  <view style='height:40%;'>
+  </view>
+  <image src="../../lib/flower_banner1_xcx.jpg" class="img"></image>
+</view>
 
 
-  <image bindtap='biaobai' class="dibu" src='../../lib/lovebut.png'></image>
- 
-  <view wx:for="{{professList}}" wx:key class="li{{index}} li">
-    <view class='up'>
-      <image src="{{item.uicon}}" wx:if="{{item.isShowName==0}}"></image>
-      <image src="../../lib/1.png" wx:else></image>
-      <text class='name' wx:if="{{item.isShowName==0}}">{{item.uname}}</text>
-      <text class='name' wx:else>匿名社会人</text>
-      <!-- <text class='sex'>{{item.usex}}</text> -->
-      <!-- <text class='object'>{{item.pobject}}</text> -->
-    </view>
-    <view class='middle'>
-      <text wx:if="{{item.lcontent}}">{{item.lcontent}}</text>
-      <!-- <scroll-view bindscroll="scroll" style="height:{{clientHeight}}px;" class="container_wrap" scroll-y="true"> -->
-       <image src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}" bindtap='preview' data-src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}"  mode="widthFix"></image> 
+
+<image bindtap='biaobai' class="dibu" src='../../lib/lovebut.png'></image>
+
+<view wx:for="{{professList}}" wx:key class="li{{index}} li">
+  <view class='up'>
+    <image src="{{item.uicon}}" wx:if="{{item.isShowName==0}}"></image>
+    <image src="../../lib/1.png" wx:else></image>
+    <text class='name' wx:if="{{item.isShowName==0}}">{{item.uname}}</text>
+    <text class='name' wx:else>匿名社会人</text>
+    <!-- <text class='sex'>{{item.usex}}</text> -->
+    <!-- <text class='object'>{{item.pobject}}</text> -->
+  </view>
+  <view class='middle'>
+    <text wx:if="{{item.lcontent}}">{{item.lcontent}}</text>
+    <!-- <scroll-view bindscroll="scroll" style="height:{{clientHeight}}px;" class="container_wrap" scroll-y="true"> -->
+    <image src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}" bindtap='preview' data-src="https://www.yunteng0923.cn/MakeYouListen/pic/{{item.picaddr}}" mode="widthFix"></image>
 
 
     <!-- </scroll-view> -->
-    </view>
-    <view class='down'>
-       <!-- <text bindtap='lovecomment' id="{{item.lno}}"  class='fa fa-comment' decode ></text>  -->
-       <image bindtap='lovecomment' id="{{item.lno}}" class="fa" src='../../lib/comment.png'></image> 
-       <!-- <button type='primary' size="mini"  bindtap='comment' id="{{item.tid}}" class='left'>进入</button> -->
-      <text class='time' decode>{{item.ltime}}</text>
-    </view>
   </view>
-
-
+  <view class='down'>
+    <!-- <text bindtap='lovecomment' id="{{item.lno}}"  class='fa fa-comment' decode ></text>  -->
+    <image bindtap='lovecomment' id="{{item.lno}}" class="fa" src='../../lib/comment.png'></image>
+    <!-- <button type='primary' size="mini"  bindtap='comment' id="{{item.tid}}" class='left'>进入</button> -->
+    <text class='time' decode>{{item.ltime}}</text>
+  </view>
+</view>
