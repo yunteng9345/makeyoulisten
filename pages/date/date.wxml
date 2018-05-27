@@ -16,20 +16,33 @@
                       <view wx:if="{{item.main}}"  class='main' style="background:url('{{item.bg}}') no-repeat;background-size:100% 100%;">
                         <text class="name">{{item.name}}</text>
                         <text class="tongyi">已经</text>
-                        <text class="sub">{{item.sub}}</text>
+                        <text class="sub">{{item.sub}}天</text>
                         <text class="date">{{item.date}}</text>
                       </view>
                     </view> 
 
                     <view wx:for="{{pass}}" wx:key class="con con{{index}}">
                       <view class='body' bindtap='showPass'  id="{{item.id}}">
-                        <image src="{{item.bg}}"></image>
-                      <view class='right'>
-                        <text class="name">{{item.name}}</text>
-                        <text class="tongyi">已经</text>
-                        <text class="sub">{{item.sub}}</text>
-                        <text class="date">{{item.date}}</text>
-                      </view>
+                        <!-- <image src="{{item.bg}}"></image>
+                        <view class='right'>
+                          <text class="name">{{item.name}}</text>
+                          <text class="tongyi">已经</text>
+                          <text class="sub">{{item.sub}}天</text>
+                          <text class="date">{{item.date}}</text>
+                        </view> -->
+
+                          <view class='left'>
+                              <text class="name">{{item.name}}</text>
+                               <text class="tongyi">已经</text>
+                          </view>
+                          <view class='right'>
+                            <text class="sub">{{item.sub}}天</text>
+                            <text class="fa fa-chevron-right"></text>
+                          </view>
+                        
+                          
+                          
+                       
                       </view>
                     </view>  
                   <button class='btn' plain bindtap='addDate' id="pass">创建</button>             
@@ -44,19 +57,27 @@
                       <view wx:if="{{item.main}}" class='main' style="background:url('{{item.bg}}') no-repeat;background-size:100% 100%;">
                         <text class="name">{{item.name}}</text>
                         <text class="tongyi">还有</text>
-                        <text class="sub">{{item.sub}}</text>
+                        <text class="sub">{{item.sub}}天</text>
                         <text class="date">{{item.date}}</text>
                       </view>
                     </view>
                     <view wx:for="{{future}}" wx:key class="con con{{index}}">
                       <view class='body' bindtap='showFuture' id="{{item.id}}">
-                        <image src="{{item.bg}}"></image>
+                        <!-- <image src="{{item.bg}}"></image>
                       <view class='right'>
                         <text class="name">{{item.name}}</text>
                         <text class="tongyi">还有</text>
-                        <text class="sub">{{item.sub}}</text>
+                        <text class="sub">{{item.sub}}天</text>
                         <text class="date">{{item.date}}</text>
-                      </view>
+                      </view> -->
+                       <view class='left'>
+                              <text class="name">{{item.name}}</text>
+                               <text class="tongyi">已经</text>
+                          </view>
+                          <view class='right'>
+                            <text class="sub">{{item.sub}}天</text>
+                            <text class="fa fa-chevron-right"></text>
+                          </view>
                       </view>
                     </view> 
                   <button class='btn' plain bindtap='addDate' id="future">创建</button>  

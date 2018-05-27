@@ -33,37 +33,46 @@ Page({
     main:false,
     txt:""
   },
-  
   bindDateChange(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
       this.setData({
         date: e.detail.value
       })
   },
   txtinput(e) {
     this.setData({
-      txt: e.detail.value
+        txt: e.detail.value
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //console.log(options.stage+"-----"+options.edit+"-----"+options.id)
+    var that=this
     this.setData({
       edit: options.edit
     })
-    //console.log(options.stage+"-----"+options.edit+"-----"+options.id)
     stage = options.stage
-    if (typeof (options.id)!="undefined")
-      id=options.id
+    if (typeof (options.id)!="undefined"){
+      id = options.id
+    }
     wx.getStorage({
       key: options.stage,
-      success: res=> {
+      success: res => {
         this.setData({
-          List:res.data
+          List: res.data
         })
+        //处于修改状态
+        if(this.data.edit==1){
+          this.setData({
+            ListItem: res.data[options.id - 1],
+            txt: res.data[options.id - 1].name,
+            date: res.data[options.id - 1].date
+          })
+        }
       }
     })
+    
   },
   choose() {
     wx.chooseImage({
@@ -72,7 +81,6 @@ Page({
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: res => {
         var tempFilePaths = res.tempFilePaths[0]
-        console.log(tempFilePaths)
         this.setData({
           picaddr: tempFilePaths
         })
@@ -96,9 +104,16 @@ Page({
   isMain(){
     var that = this
     this.data.main=!this.data.main
-    this.setData({
-      main:that.data.main
-    })
+    if (that.data.main == true) {
+      for (let i = 0; i < this.data.List.length; i++) {
+        this.data.List[i].main = false
+      }
+    }else{
+      this.setData({
+        main: that.data.main
+      })
+    }
+    
   },
   create(){
     if (this.data.txt == ""){
@@ -113,7 +128,7 @@ Page({
        res = DateJs.DateTime(this.data.date, util.formatTime(new Date()))
     else
       res = DateJs.DateTime(util.formatTime(new Date()), this.data.date)
-    console.log(res)
+   
     if (res<0){
       wx.showModal({
         title: '请选择正确的时间',
@@ -142,18 +157,23 @@ Page({
     this.setData({
       List:that.data.List
     })
-    // console.log(stage)
+    console.log(stage)
+
     wx.setStorage({
       key: stage,
-      data: that.data.List
+      data: that.data.List,
+      success: function (res) {
+        // console.log("成功: "+that.data.List.length+"----阶段： "+stage)
+        wx.reLaunch({
+          url: './date?refurbish=true',
+        })
+      }
     })
-    wx.reLaunch({
-      url: './date',
-    })
+    
   },
   cancel() {
     wx.reLaunch({
-      url: './date',
+      url: './date?refurbish=true',
     })
   },
   save() {
@@ -184,19 +204,23 @@ Page({
       return;
     }
     this.data.List[id-1].name=this.data.txt
-    this.data.List[id-1].data = this.data.date
+    this.data.List[id-1].date = this.data.date
     this.data.List[id-1].main = this.data.main
     this.setData({
       List: that.data.List
     })
     // console.log(stage)
+    
     wx.setStorage({
       key: stage,
-      data: that.data.List
+      data: that.data.List,
+      success:res=>{
+        wx.reLaunch({
+          url: './date?refurbish=true',
+        })
+      }
     })
-    wx.reLaunch({
-      url: './date',
-    })
+    
   },
   delet() {
     var that=this
@@ -214,7 +238,7 @@ Page({
       content: '成功！',
       success:res=>{
         wx.reLaunch({
-          url: './date',
+          url: './date?refurbish=true',
         })
       }
     })

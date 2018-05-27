@@ -1,22 +1,22 @@
 /* pages/date/showDate.wxss */
 .main{
-  padding:35% 0;
+  padding:40% 0;
 }
 .main text{
   display: block;
 }
 .main .name,.name{
-  font-weight: 800;padding: 3rem 0 0.5rem 0;font-size: 15px;
+  font-weight: 800;padding:1rem 0 0.5rem 0;font-size: 18px;
 }
 .main .tongyi,.tongyi{
-  padding: 0 0 0.8rem 0;font-size: 12px;
+  padding: 0 0 0.3rem 0;font-size: 14px;
 }
-.main .sub,.sub{
-  font-weight: 700;padding: 0 0 1rem 0;font-size: 24px;
+.main .sub{
+  font-weight: 800;padding: 0 0 0.5rem 0;font-size: 50px;
   font-family: 'Times New Roman', Times, serif;
 }
 .main .date,.date{
-  padding: 0 0 1rem 0;font-size: 12px;
+  padding: 0 0 0.5rem 0;font-size: 14px;font-weight: 600;
 }
 
 .down{
@@ -24,7 +24,7 @@
   padding:0 40%;height: 50px;
 }
 .down .fa{
-  font-size: 24px; position: absolute;width: 8%;
+  font-size: 24px; position: absolute;width: 10%;color:white;
 }
-.change{left: 40%;}
-.edit{left: 50%;}
+.change{left: 35%;}
+.edit{left: 60%;}

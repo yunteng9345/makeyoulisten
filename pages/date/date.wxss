@@ -11,54 +11,49 @@ page,
     padding-bottom: 0;
 }
 .weui-tab__content{
-    /* padding-top: 60px; */
     text-align: center;
 }
 .weui-tab__content .main{
-  height: 200px;
+  height:400px;
 }
 .weui-tab__content .main text{
   display: block;
 }
-.main .name,.name{
-  font-weight: 800;padding: 3rem 0 0.5rem 0;font-size: 15px;
+.main .name{
+  font-weight: 800;padding: 3rem 0 0.5rem 0;font-size: 18px;
 }
-.main .tongyi,.tongyi{
-  padding: 0 0 0.8rem 0;font-size: 12px;
+.main .tongyi{
+  padding: 0 0 0.5rem 0;font-size: 14px;
 }
-.main .sub,.sub{
-  font-weight: 700;padding: 0 0 1rem 0;font-size: 24px;
+.main .sub{
+  font-weight: 800;padding: 0 0 0.8rem 0;font-size: 50px;
   font-family: 'Times New Roman', Times, serif;
 }
-.main .date,.date{
-  padding: 0 0 1rem 0;font-size: 12px;
+.main .date{
+  padding: 0 0 1rem 0;font-size: 14px;font-weight: 600;
 }
 button{
   margin: 0 2rem;
 }
-
 .body{
- margin: 1rem 0.8rem; border-radius: 10px;border:1px solid turquoise;
- display: flex;direction: row;height: 120px;position: relative;
+ margin: 1rem 0.8rem; border-bottom:1px solid gray;
+ display: flex;direction: row;position: relative;
 }
-.body image{
-  width: 30%;height: 100%;position: absolute;border-radius: 10px 0  0 10px ;
+.body left{
+  width: 40%;height: 100%;position: absolute;border-radius: 10px 0  0 10px ;
 }
 .body .right{
-  position: absolute;left: 35%;width: 65%;height: 100%;
+  position: absolute;left: 40%;width: 60%;height: 100%;
 }
-.right text{
-  display: block;font-weight: 400;
-}
-.right .name{
+.left .name{
  padding: 0.2rem 0;
 }
-.right .tongyi{
-  padding: 0 0 0.3rem 0;
+.left .tongyi{
+  padding: 0 0.1rem 0.3rem 0.1rem;
 }
 .right .sub{
-  padding: 0 0 0.3rem 0;
+ position: absolute;font-size: 20px;color:gray;width:30%;left: 50%;
 }
-.right .date{
-  padding: 0 0 0.3rem 0;
+.right .fa{
+  position: absolute;font-size: 20px;color:gray;width:10%;left: 90%;bottom: 0;
 }

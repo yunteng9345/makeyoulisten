@@ -2,8 +2,11 @@
 //获取应用实例
 //const app = getApp()
 var proData=require('../../data/indexData.js')
+var util = require('../../utils/util.js')
+
 Page({
   data: {
+    nowTime: ''   ,
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
@@ -26,7 +29,8 @@ Page({
     ],
     isLike: [],
     len:0,
-    comment_count:[]
+    comment_count:[],
+    time: util.formatTime(new Date())
   },
   /***下拉刷新 */
   onPullDownRefresh: function () {
@@ -106,5 +110,15 @@ Page({
       path: '/pages/index/index',
     }
   },
+  onShow(){
+    // 页面显示
+    var commonFunction = require('../../utils/util.js'),
+      that = this;
+    var interval = setInterval(function () {
+      that.setData({
+        nowTime: commonFunction.formatTime(new Date())
+      })
+    }, 1000);
+  }
   
 })

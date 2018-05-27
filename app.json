@@ -14,7 +14,9 @@
     "pages/more/about",
     "pages/more/back",
     "pages/lovecomment/lovecomment",
-    "pages/date/date"
+    "pages/date/date",
+    "pages/date/showDate",
+    "pages/date/addDate"
     
   ],
   "window": {

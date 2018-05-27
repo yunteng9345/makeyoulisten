@@ -1,9 +1,16 @@
+var util = require('../../utils/util.js')
+var DateJs = require('../../utils/date.js')
+var id
+var stage
 Page({
+
   data: {
   
   },
   onLoad: function (options) {
      // console.log(options.id+" "+options.stage)
+      id = options.id
+      stage = options.stage
       wx.getSystemInfo({
         success:res=> {
           this.setData({
@@ -16,10 +23,25 @@ Page({
       wx.getStorage({
         key: options.stage,
         success: res=> {
-          this.setData({
-            List: res.data,
-            ListItem: res.data[options.id - 1]
-          })
+          if(this.data.stage=="pass"){
+            for (let i = 0; i < res.data.length; i++) {
+              res.data[i].sub = DateJs.DateTime(res.data[i].date, util.formatTime(new Date()))
+            } 
+            this.setData({
+              List: res.data,
+              ListItem: res.data[options.id - 1]
+            })
+          }
+          else{
+            for (let i = 0; i < res.data.length; i++) {
+              res.data[i].sub = DateJs.DateTime(util.formatTime(new Date()), res.data[i].date)
+              if (res.data[i].sub < 0) res.data[i].sub=0;
+            }
+            this.setData({
+                List: res.data,
+                ListItem: res.data[options.id - 1]
+              })
+          }
         }
       })
   },
@@ -35,11 +57,33 @@ Page({
       ListItem: that.data.ListItem
     })
   },
-  edit(e){
-    wx.navigateTo({
-      url: './addDate?id=' + e.currentTarget.id + "&stage=" + this.data.stage + "&edit=1" ,
+  // edit(e){
+  //   wx.navigateTo({
+  //     url: './addDate?id=' + e.currentTarget.id + "&stage=" + this.data.stage + "&edit=1" ,
+  //   })
+  // },
+  delet() {
+    var that = this
+    this.data.List.splice(id - 1, 1)
+    this.setData({
+      List: that.data.List
+    })
+    wx.setStorage({
+      key: stage,
+      data: that.data.List
+    })
+    console.log(this.data.List.length)
+    wx.showModal({
+      title: '删除',
+      content: '成功！',
+      success: res => {
+        wx.reLaunch({
+          url: './date?refurbish=true',
+        })
+      }
     })
   },
+
   /**
    * 用户点击右上角分享
    */

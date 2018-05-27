@@ -15,11 +15,6 @@
 <!--test  
 <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
 -->
-
-
-
-
-
       <!-- 一条主题的渲染 -->
       <block wx:for="{{dataList}}" wx:for-item="item" wx:key class="con">
         <!-- 主题调整内边距容器 -->
