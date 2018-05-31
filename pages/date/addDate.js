@@ -39,15 +39,23 @@ Page({
       })
   },
   txtinput(e) {
-    this.setData({
+    if (typeof (e.detail.value)!="undefined"){
+      this.setData({
         txt: e.detail.value
-    })
+      })
+    }
+    else{
+      this.setData({
+        txt: e.currentTarget.id
+      })
+    }
+    console.log(this.data.txt)
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //console.log(options.stage+"-----"+options.edit+"-----"+options.id)
+    console.log(options.stage+"-----"+options.edit+"-----"+options.id)
     var that=this
     this.setData({
       edit: options.edit
@@ -56,6 +64,7 @@ Page({
     if (typeof (options.id)!="undefined"){
       id = options.id
     }
+    
     wx.getStorage({
       key: options.stage,
       success: res => {
@@ -215,6 +224,7 @@ Page({
       key: stage,
       data: that.data.List,
       success:res=>{
+        // console.log("txt:"+that.data.txt)
         wx.reLaunch({
           url: './date?refurbish=true',
         })

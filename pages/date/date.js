@@ -1,7 +1,6 @@
 var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
 var util=require('../../utils/util.js')
 var DateJs = require('../../utils/date.js')
-var commonFunction=require('../index/common.js')
 var refurbish
 Page({
   data: {
@@ -32,7 +31,7 @@ Page({
     ]
   },
   onLoad: function (options) {
-    console.log("onLoad")
+    //console.log("onLoad")
     var that = this;
     refurbish = options.refurbish
     wx.getSystemInfo({
@@ -46,8 +45,8 @@ Page({
   //查看是否有用户缓存信息
       wx.getStorageInfo({
         success: res=> {
-          console.log(res.keys)
-          if (res.keys.length!=0){//如果有缓存
+         // console.log(res.keys)
+          if (res.keys.length>1){//如果有缓存
               console.log("有缓存")
               wx.getStorage({
                 key: 'pass',
@@ -113,67 +112,6 @@ Page({
     })// wx.getStorageInfo
 
 
-    // if (typeof(refurbish)=="undefined"){
-    //   wx.setStorage({
-    //     key: 'pass',
-    //     data: that.data.pass,
-    //   })
-
-    //   wx.setStorage({
-    //     key: 'future',
-    //     data: that.data.future,
-    //   })
-
-    //   wx.getStorage({
-    //     key: 'pass',
-    //     success: res => {
-    //       for (let i = 0; i < res.data.length; i++) {
-    //         res.data[i].sub = DateJs.DateTime(res.data[i].date, util.formatTime(new Date()))
-    //       }
-    //       this.setData({
-    //         pass: res.data
-    //       })
-    //     },
-    //   })
-    //   wx.getStorage({
-    //     key: 'future',
-    //     success: res => {
-    //       for (let i = 0; i < res.data.length; i++) {
-    //         res.data[i].sub = DateJs.DateTime(util.formatTime(new Date()), res.data[i].date)
-    //         if (res.data[i].sub<0)  res.data[i].sub=0
-    //       }
-    //       this.setData({
-    //         future: res.data
-    //       })
-    //     },
-    //   })
-    // }
-    
-    // else{
-    //   wx.getStorage({
-    //     key: 'pass',
-    //     success: res => {
-    //       for(let i=0;i<res.data.length;i++){
-    //         res.data[i].sub = DateJs.DateTime(res.data[i].date, util.formatTime(new Date()))
-    //       }
-    //       this.setData({
-    //         pass: res.data
-    //       })
-    //     },
-    //   })
-    //   wx.getStorage({
-    //     key: 'future',
-    //     success: res => {
-    //       for (let i = 0; i < res.data.length; i++) {
-    //         res.data[i].sub = DateJs.DateTime(util.formatTime(new Date()),res.data[i].date)
-    //         if (res.data[i].sub < 0) res.data[i].sub = 0
-    //       }
-    //       this.setData({
-    //         future: res.data
-    //       })
-    //     },
-    //   })
-    // }
   },
   onShow() {
     console.log("onShow")

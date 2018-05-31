@@ -23,14 +23,6 @@
 
                     <view wx:for="{{pass}}" wx:key class="con con{{index}}">
                       <view class='body' bindtap='showPass'  id="{{item.id}}">
-                        <!-- <image src="{{item.bg}}"></image>
-                        <view class='right'>
-                          <text class="name">{{item.name}}</text>
-                          <text class="tongyi">已经</text>
-                          <text class="sub">{{item.sub}}天</text>
-                          <text class="date">{{item.date}}</text>
-                        </view> -->
-
                           <view class='left'>
                               <text class="name">{{item.name}}</text>
                                <text class="tongyi">已经</text>
@@ -72,7 +64,7 @@
                       </view> -->
                        <view class='left'>
                               <text class="name">{{item.name}}</text>
-                               <text class="tongyi">已经</text>
+                               <text class="tongyi">还有</text>
                           </view>
                           <view class='right'>
                             <text class="sub">{{item.sub}}天</text>

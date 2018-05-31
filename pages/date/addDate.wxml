@@ -1,7 +1,7 @@
 <view class="body">
     <view class='item'>
       <label>名称:</label>
-       <input wx:if="{{edit==1}}" type='text'   value='{{ListItem.name}}' maxlength="12" id='{{ListItem.name}}'  placeholder='最多12个字'></input>
+       <input wx:if="{{edit==1}}" type='text'   value='{{ListItem.name}}' maxlength="12" id='{{ListItem.name}}'  placeholder='最多12个字' bindinput='txtinput'></input>
 
       <input wx:else type='text' maxlength="12" bindinput='txtinput' value="{{txt}}" id="{{txt}}"   placeholder='最多12个字'></input>
 

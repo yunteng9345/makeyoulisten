@@ -33,7 +33,7 @@ page,
   padding: 0 0 1rem 0;font-size: 14px;font-weight: 600;
 }
 button{
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 .body{
  margin: 1rem 0.8rem; border-bottom:1px solid gray;
@@ -49,7 +49,7 @@ button{
  padding: 0.2rem 0;
 }
 .left .tongyi{
-  padding: 0 0.1rem 0.3rem 0.1rem;
+  padding-left:0.5rem;
 }
 .right .sub{
  position: absolute;font-size: 20px;color:gray;width:30%;left: 50%;

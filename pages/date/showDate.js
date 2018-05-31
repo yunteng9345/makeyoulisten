@@ -2,21 +2,26 @@ var util = require('../../utils/util.js')
 var DateJs = require('../../utils/date.js')
 var id
 var stage
+
 Page({
 
   data: {
-  
+    
   },
   onLoad: function (options) {
      // console.log(options.id+" "+options.stage)
-      id = options.id
+     //var that=this;
+      id = options.id 
       stage = options.stage
+    
       wx.getSystemInfo({
         success:res=> {
           this.setData({
             allHeight: res.screenHeight,
-            stage: options.stage
+            stage: options.stage,
+           
           })
+         console.log(stage)
         }
       })
   
@@ -57,11 +62,11 @@ Page({
       ListItem: that.data.ListItem
     })
   },
-  // edit(e){
-  //   wx.navigateTo({
-  //     url: './addDate?id=' + e.currentTarget.id + "&stage=" + this.data.stage + "&edit=1" ,
-  //   })
-  // },
+  edit(e){
+    wx.navigateTo({
+      url: './addDate?id=' + e.currentTarget.id + "&stage=" + this.data.stage + "&edit=1" ,
+    })
+  },
   delet() {
     var that = this
     this.data.List.splice(id - 1, 1)
