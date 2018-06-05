@@ -6,7 +6,7 @@
       <image src="{{uicon}}" wx:if="{{loveWallTheme.isShowName==0}}" class='avatar'></image>
       <image src="../../lib/1.png" wx:else class='avatar'></image>
       <text class='name' wx:if="{{loveWallTheme.isShowName==0}}">{{uname}}</text>
-      <text class='name' wx:else>匿名社会人</text>
+      <text class='name' wx:else>吃瓜群众</text>
     </view>
     <view class='xia'>
       <text class='content'>{{loveWallTheme.lcontent}}</text>

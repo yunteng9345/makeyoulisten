@@ -15,7 +15,7 @@
     <image src="{{item.uicon}}" wx:if="{{item.isShowName==0}}"></image>
     <image src="../../lib/1.png" wx:else></image>
     <text class='name' wx:if="{{item.isShowName==0}}">{{item.uname}}</text>
-    <text class='name' wx:else>匿名社会人</text>
+    <text class='name' wx:else>吃瓜群众</text>
     <!-- <text class='sex'>{{item.usex}}</text> -->
     <!-- <text class='object'>{{item.pobject}}</text> -->
   </view>

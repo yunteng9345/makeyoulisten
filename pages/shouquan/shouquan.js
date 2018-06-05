@@ -13,7 +13,7 @@ Page({
             success: function (res) {
               console.log(res.userInfo)
               wx.reLaunch({
-                url: '../story/story',
+                url: '../date/date',
               })
             }
           })
@@ -62,7 +62,7 @@ Page({
                 })
                 //登录成功跳转
                 wx.reLaunch({
-                  url: '../story/story',
+                  url: '../date/date',
                 })
               },
 
